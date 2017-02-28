@@ -38,7 +38,7 @@ System.register("app/app.component", ["@angular/core"], function (exports_1, con
         }
     };
 });
-System.register("app/app.module", ["@angular/platform-browser", "@angular/core", "@angular/forms", "@angular/http", "@angular/material", "hammerjs", "app/app.component"], function (exports_2, context_2) {
+System.register("app/app.module", ["@angular/platform-browser", "@angular/core", "@angular/forms", "@angular/http", "@angular/material", "app/app.component"], function (exports_2, context_2) {
     "use strict";
     var __moduleName = context_2 && context_2.id;
     var platform_browser_1, core_2, forms_1, http_1, material_1, app_component_1, AppModule;
@@ -58,8 +58,6 @@ System.register("app/app.module", ["@angular/platform-browser", "@angular/core",
             },
             function (material_1_1) {
                 material_1 = material_1_1;
-            },
-            function (_1) {
             },
             function (app_component_1_1) {
                 app_component_1 = app_component_1_1;

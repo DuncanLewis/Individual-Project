@@ -739,6 +739,1156 @@
 		"oAP": "\/api\/vendor\/autoload.php",
 		"oF": 0
 		},
+	"\/api\/vendor\/cakedc\/users\/.gitignore": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/.gitignore",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/.semver": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/.semver",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/.travis.yml": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/.travis.yml",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/CHANGELOG.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/CHANGELOG.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/composer.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/api\/vendor\/cakedc\/users\/composer-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/api\/vendor\/cakedc\/users\/config\/bootstrap.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/config\/bootstrap.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/config\/Migrations\/20150513201111_initial.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/config\/Migrations\/20150513201111_initial.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/config\/Migrations\/20161031101316_AddSecretToUsers.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/config\/Migrations\/20161031101316_AddSecretToUsers.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/config\/Migrations\/schema-dump-default.lock": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/config\/Migrations\/schema-dump-default.lock",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/config\/permissions.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/config\/permissions.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/config\/routes.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/config\/routes.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/config\/users.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/config\/users.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/CONTRIBUTING.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/CONTRIBUTING.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/ApiKeyAuthenticate.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/ApiKeyAuthenticate.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/Configuration.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/Configuration.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/Events.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/Events.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/Extending-the-Plugin.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/Extending-the-Plugin.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/Installation.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/Installation.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/Overview.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/Overview.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/OwnerRule.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/OwnerRule.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/SimpleRbacAuthorize.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/SimpleRbacAuthorize.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/SocialAuthenticate.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/SocialAuthenticate.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/SuperuserAuthorize.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/SuperuserAuthorize.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/Translations.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/Translations.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/UserHelper.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/Docs\/Documentation\/UserHelper.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/Docs\/Home.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/Docs\/Home.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/LICENSE.txt": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/LICENSE.txt",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/phpunit.xml.dist": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/phpunit.xml.dist",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/ApiKeyAuthenticate.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/ApiKeyAuthenticate.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Exception\/InvalidProviderException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Exception\/InvalidProviderException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Exception\/InvalidSettingsException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Exception\/InvalidSettingsException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Exception\/MissingEventListenerException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Exception\/MissingEventListenerException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Exception\/MissingProviderConfigurationException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Exception\/MissingProviderConfigurationException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/RememberMeAuthenticate.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/RememberMeAuthenticate.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Rules\/AbstractRule.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Rules\/AbstractRule.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Rules\/Owner.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Rules\/Owner.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Rules\/Rule.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Rules\/Rule.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/SimpleRbacAuthorize.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/SimpleRbacAuthorize.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Mapper\/AbstractMapper.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Mapper\/AbstractMapper.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Mapper\/Facebook.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Mapper\/Facebook.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Mapper\/Google.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Mapper\/Google.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Mapper\/Instagram.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Mapper\/Instagram.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Mapper\/LinkedIn.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Mapper\/LinkedIn.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Mapper\/Twitter.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Mapper\/Twitter.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Util\/SocialUtils.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/Social\/Util\/SocialUtils.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/SocialAuthenticate.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/SocialAuthenticate.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Auth\/SuperuserAuthorize.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Auth\/SuperuserAuthorize.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/AppController.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/AppController.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/Component\/GoogleAuthenticatorComponent.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/Component\/GoogleAuthenticatorComponent.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/Component\/RememberMeComponent.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/Component\/RememberMeComponent.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/Component\/UsersAuthComponent.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/Component\/UsersAuthComponent.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/SocialAccountsController.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/SocialAccountsController.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/CustomUsersTableTrait.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/CustomUsersTableTrait.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/LoginTrait.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/LoginTrait.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/PasswordManagementTrait.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/PasswordManagementTrait.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/ProfileTrait.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/ProfileTrait.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/ReCaptchaTrait.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/ReCaptchaTrait.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/RegisterTrait.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/RegisterTrait.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/SimpleCrudTrait.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/SimpleCrudTrait.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/SocialTrait.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/SocialTrait.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/UserValidationTrait.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/Traits\/UserValidationTrait.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Controller\/UsersController.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Controller\/UsersController.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Email\/EmailSender.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Email\/EmailSender.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Exception\/AccountAlreadyActiveException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Exception\/AccountAlreadyActiveException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Exception\/AccountNotActiveException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Exception\/AccountNotActiveException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Exception\/BadConfigurationException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Exception\/BadConfigurationException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Exception\/MissingEmailException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Exception\/MissingEmailException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Exception\/MissingProviderException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Exception\/MissingProviderException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Exception\/TokenExpiredException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Exception\/TokenExpiredException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Exception\/UserAlreadyActiveException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Exception\/UserAlreadyActiveException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Exception\/UserNotActiveException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Exception\/UserNotActiveException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Exception\/UserNotFoundException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Exception\/UserNotFoundException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Exception\/WrongPasswordException.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Exception\/WrongPasswordException.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Locale\/es\/Users.mo": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Locale\/es\/Users.mo",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Locale\/es\/Users.po": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Locale\/es\/Users.po",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Locale\/fr_FR\/Users.mo": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Locale\/fr_FR\/Users.mo",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Locale\/fr_FR\/Users.po": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Locale\/fr_FR\/Users.po",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Locale\/pt_BR\/Users.mo": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Locale\/pt_BR\/Users.mo",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Locale\/pt_BR\/Users.po": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Locale\/pt_BR\/Users.po",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Locale\/sv\/Users.mo": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Locale\/sv\/Users.mo",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Locale\/sv\/Users.po": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Locale\/sv\/Users.po",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Locale\/Users.pot": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Locale\/Users.pot",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Mailer\/UsersMailer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Mailer\/UsersMailer.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Model\/Behavior\/Behavior.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Model\/Behavior\/Behavior.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Model\/Behavior\/PasswordBehavior.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Model\/Behavior\/PasswordBehavior.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Model\/Behavior\/RegisterBehavior.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Model\/Behavior\/RegisterBehavior.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Model\/Behavior\/SocialAccountBehavior.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Model\/Behavior\/SocialAccountBehavior.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Model\/Behavior\/SocialBehavior.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Model\/Behavior\/SocialBehavior.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Model\/Entity\/SocialAccount.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Model\/Entity\/SocialAccount.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Model\/Entity\/User.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Model\/Entity\/User.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Model\/Table\/SocialAccountsTable.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Model\/Table\/SocialAccountsTable.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Model\/Table\/UsersTable.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Model\/Table\/UsersTable.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Shell\/UsersShell.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Shell\/UsersShell.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Email\/html\/reset_password.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Email\/html\/reset_password.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Email\/html\/social_account_validation.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Email\/html\/social_account_validation.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Email\/html\/validation.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Email\/html\/validation.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Email\/text\/reset_password.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Email\/text\/reset_password.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Email\/text\/social_account_validation.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Email\/text\/social_account_validation.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Email\/text\/validation.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Email\/text\/validation.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Layout\/Email\/html\/default.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Layout\/Email\/html\/default.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Layout\/Email\/text\/default.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Layout\/Email\/text\/default.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/add.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/add.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/change_password.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/change_password.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/edit.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/edit.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/index.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/index.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/login.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/login.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/profile.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/profile.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/register.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/register.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/request_reset_password.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/request_reset_password.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/resend_token_validation.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/resend_token_validation.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/social_email.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/social_email.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/verify.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/verify.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/view.ctp": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Template\/Users\/view.ctp",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/Traits\/RandomStringTrait.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/Traits\/RandomStringTrait.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/View\/Helper\/AuthLinkHelper.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/View\/Helper\/AuthLinkHelper.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/src\/View\/Helper\/UserHelper.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/src\/View\/Helper\/UserHelper.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/App\/Controller\/AppController.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/App\/Controller\/AppController.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/bootstrap.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/bootstrap.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/config\/routes.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/config\/routes.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/Fixture\/PostsFixture.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/Fixture\/PostsFixture.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/Fixture\/PostsUsersFixture.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/Fixture\/PostsUsersFixture.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/Fixture\/SocialAccountsFixture.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/Fixture\/SocialAccountsFixture.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/Fixture\/UsersFixture.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/Fixture\/UsersFixture.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Auth\/ApiKeyAuthenticateTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Auth\/ApiKeyAuthenticateTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Auth\/RememberMeAuthenticateTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Auth\/RememberMeAuthenticateTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Auth\/Rules\/OwnerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Auth\/Rules\/OwnerTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Auth\/SimpleRbacAuthorizeTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Auth\/SimpleRbacAuthorizeTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Auth\/SocialAuthenticateTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Auth\/SocialAuthenticateTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Auth\/SuperuserAuthorizeTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Auth\/SuperuserAuthorizeTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Component\/GoogleAuthenticatorComponentTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Component\/GoogleAuthenticatorComponentTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Component\/RememberMeComponentTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Component\/RememberMeComponentTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Component\/UsersAuthComponentTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Component\/UsersAuthComponentTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/SocialAccountsControllerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/SocialAccountsControllerTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/BaseTraitTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/BaseTraitTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/CustomUsersTableTraitTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/CustomUsersTableTraitTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/LoginTraitTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/LoginTraitTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/PasswordManagementTraitTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/PasswordManagementTraitTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/ProfileTraitTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/ProfileTraitTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/RecaptchaTraitTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/RecaptchaTraitTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/RegisterTraitTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/RegisterTraitTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/SimpleCrudTraitTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/SimpleCrudTraitTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/SocialTraitTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/SocialTraitTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/UserValidationTraitTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Controller\/Traits\/UserValidationTraitTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Email\/EmailSenderTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Email\/EmailSenderTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Mailer\/UsersMailerTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Mailer\/UsersMailerTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Behavior\/PasswordBehaviorTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Behavior\/PasswordBehaviorTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Behavior\/RegisterBehaviorTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Behavior\/RegisterBehaviorTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Behavior\/SocialAccountBehaviorTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Behavior\/SocialAccountBehaviorTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Behavior\/SocialBehaviorTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Behavior\/SocialBehaviorTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Entity\/UserTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Entity\/UserTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Table\/SocialAccountsTableTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Table\/SocialAccountsTableTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Table\/UsersTableTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Model\/Table\/UsersTableTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Shell\/UsersShellTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Shell\/UsersShellTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Traits\/RandomStringTraitTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/Traits\/RandomStringTraitTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/View\/Helper\/AuthLinkHelperTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/View\/Helper\/AuthLinkHelperTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/tests\/TestCase\/View\/Helper\/UserHelperTest.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/tests\/TestCase\/View\/Helper\/UserHelperTest.php",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/webroot\/empty": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/api\/vendor\/cakedc\/users\/webroot\/empty",
+		"oF": 0
+		},
+	"\/api\/vendor\/cakedc\/users\/webroot\/img\/avatar_placeholder.png": {
+		"ft": 32768,
+		"iS": 4015,
+		"oA": 0,
+		"oAP": "\/api\/vendor\/cakedc\/users\/webroot\/img\/avatar_placeholder.png",
+		"oF": 0,
+		"opt": 0
+		},
 	"\/api\/vendor\/cakephp-plugins.php": {
 		"ft": 8192,
 		"oA": 2,
