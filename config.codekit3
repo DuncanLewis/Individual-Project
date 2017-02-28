@@ -21755,6 +21755,15 @@
 		"oAP": "\/project-tracker\/src\/app\/app.component.html",
 		"oF": 0
 		},
+	"\/project-tracker\/src\/app\/app.component.spec.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/project-tracker\/src\/app\/app.component.spec-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/project-tracker\/src\/app\/app.component.spec.ts": {
 		"cDF": 0,
 		"ft": 128,
@@ -21857,6 +21866,15 @@
 		"oA": 2,
 		"oAP": "\/project-tracker\/src\/index.html",
 		"oF": 0
+		},
+	"\/project-tracker\/src\/main.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/project-tracker\/src\/main-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
 		},
 	"\/project-tracker\/src\/main.ts": {
 		"cDF": 0,
