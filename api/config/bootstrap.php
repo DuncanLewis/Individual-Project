@@ -213,7 +213,8 @@ Type::build('timestamp')
  *
  */
 
-Plugin::load('CakeDC/Users', ['routes' => true, 'bootstrap' => true]);
+Plugin::load('Crud'); //Load the CRUD plugin
+Plugin::load('ADmad/JwtAuth'); //Load the JWT Authentication plguin
 
 /*
  * Only try to load DebugKit in development mode
@@ -222,3 +223,5 @@ Plugin::load('CakeDC/Users', ['routes' => true, 'bootstrap' => true]);
 if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
+
+Plugin::load('Crud');

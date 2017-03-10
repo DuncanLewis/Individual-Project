@@ -15,7 +15,6 @@
 namespace App\Controller;
 
 use Cake\Controller\Controller;
-use Cake\Event\Event;
 
 /**
  * Application Controller
@@ -28,42 +27,45 @@ use Cake\Event\Event;
 class AppController extends Controller
 {
 
-    /**
-     * Initialization hook method.
-     *
-     * Use this method to add common initialization code like loading components.
-     *
-     * e.g. `$this->loadComponent('Security');`
-     *
-     * @return void
-     */
+    use \Crud\Controller\ControllerTrait;
+
     public function initialize()
     {
         parent::initialize();
-
         $this->loadComponent('RequestHandler');
-        $this->loadComponent('Flash');
-
-        /*
-         * Enable the following components for recommended CakePHP security settings.
-         * see http://book.cakephp.org/3.0/en/controllers/components/security.html
-         */
-        //$this->loadComponent('Security');
-        //$this->loadComponent('Csrf');
+        $this->loadComponent('Crud.Crud', [
+            'actions' => [
+                'Crud.Index',
+                'Crud.View',
+                'Crud.Add',
+                'Crud.Edit',
+                'Crud.Delete'
+            ],
+            'listeners' => [
+                'Crud.Api',
+                'Crud.ApiPagination',
+                'Crud.ApiQueryLog'
+            ]
+        ]);
+        $this->loadComponent('Auth', [
+            'storage' => 'Memory',
+            'authenticate' => [
+                'Form' => [
+                    'scope' => ['Users.active' => 1]
+                ],
+                'ADmad/JwtAuth.Jwt' => [
+                    'parameter' => 'token',
+                    'userModel' => 'Users',
+                    'scope' => ['Users.active' => 1],
+                    'fields' => [
+                        'username' => 'id'
+                    ],
+                    'queryDatasource' => true
+                ]
+            ],
+            'unauthorizedRedirect' => false,
+            'checkAuthIn' => 'Controller.initialize'
+        ]);
     }
 
-    /**
-     * Before render callback.
-     *
-     * @param \Cake\Event\Event $event The beforeRender event.
-     * @return \Cake\Network\Response|null|void
-     */
-    public function beforeRender(Event $event)
-    {
-        if (!array_key_exists('_serialize', $this->viewVars) &&
-            in_array($this->response->type(), ['application/json', 'application/xml'])
-        ) {
-            $this->set('_serialize', true);
-        }
-    }
 }

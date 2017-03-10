@@ -56,6 +56,18 @@ Router::scope('/', function (RouteBuilder $routes) {
      */
     $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
+    $routes->extensions(['json']);
+    $routes->resources('Users');
+    $routes->resources('Projects');
+    $routes->resources('Applications');
+
+
+    //Deal with unauthorized or forbidden actions
+    $routes->connect(  '/forbiden', ['action'=>'forbiden']);
+    $routes->connect(  '/unauthorized', ['action'=>'unauthorized']);
+
+    Router::connect('/users/register', ['controller' => 'Users', 'action' => 'add']);
+
     /**
      * Connect catchall routes for all controllers.
      *
@@ -73,7 +85,10 @@ Router::scope('/', function (RouteBuilder $routes) {
      * routes you want in your application.
      */
     $routes->fallbacks(DashedRoute::class);
+
+
 });
+
 
 /**
  * Load all plugin routes.  See the Plugin documentation on
