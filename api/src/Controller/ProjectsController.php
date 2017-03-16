@@ -31,5 +31,4 @@ class ProjectsController extends AppController
         ]
     ];
 
-
 }
