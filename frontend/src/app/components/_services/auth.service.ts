@@ -2,7 +2,7 @@
  * Created by duncan on 16/03/2017.
  */
 import { Injectable } from '@angular/core';
-import { Http, Headers, Response } from '@angular/http';
+import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map'
 
@@ -24,11 +24,21 @@ export class AuthService {
     }
 
     login(username: string, password: string): Observable<boolean> {
-        return this.http.post('/api/authenticate', JSON.stringify({ username: username, password: password }))
+        let headers = new Headers({ 'Accept': 'application/json', 'Content-Type': 'application/json'});
+        let options = new RequestOptions({ headers: headers });
+
+       /* let headers = new Headers;
+        headers.append('Content-Type', 'application/json');
+        let options = new RequestOptions({ headers: headers });*/
+        let body =  JSON.stringify({ "username": username, "password": password });
+
+        return this.http
+            .post('http://www.project.dev/users/token',body, options) //ToDo: turn this url into a global var
             .map((response: Response) => {
                 // login successful if there's a jwt token in the response
-                let token = response.json() && response.json().token;
-                if (token) {
+                let success = response.json() && response.json().success;
+                if (success) {
+                    let token = response.json() && response.json().data.token;
                     // set token property
                     this.token = token;
 

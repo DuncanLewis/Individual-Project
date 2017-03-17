@@ -31,7 +31,7 @@ class AppController extends Controller
 
     public function initialize()
     {
-        parent::initialize();
+        //parent::initialize();
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Crud.Crud', [
             'actions' => [
@@ -42,9 +42,9 @@ class AppController extends Controller
                 'Crud.Delete'
             ],
             'listeners' => [
-                'Crud.Api',
-                'Crud.ApiPagination',
-                'Crud.ApiQueryLog'
+                'Crud.JsonApi',
+                //'Crud.ApiPagination',
+                //'Crud.ApiQueryLog'
             ]
         ]);
         $this->loadComponent('Auth', [

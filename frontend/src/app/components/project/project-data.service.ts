@@ -1,41 +1,21 @@
 import { Injectable } from '@angular/core';
+import { Datastore } from '../_services/index';
+
+import { Project } from '../_models/index';
+
 
 @Injectable()
 export class ProjectDataService {
 
     projects: Project[] = [];
 
-    constructor() { }
+    constructor(private datastore: Datastore) { }
 
-    addProject(project: Project): ProjectDataService {
-        this.projects.push(project);
-        return this;
-    }
-
-    deleteProjectById(id: string) : ProjectDataService {
-        this.projects = this.projects
-            .filter(project => project.id !== id);
-        return this;
-    }
-
-    updateProjectById(id: string, values: Object = {}): Project {
-        let project = this.getProjectById(id);
-        if (!project) {
-            return null;
-        }
-        Object.assign(project, values);
-        return todo;
-    }
-
-    // Simulate GET /project
-    getAllProjects(): Todo[] {
-        return this.projects;
-    }
-
-    // Simulate GET /todos/:id
-    getProjectById(id: string): Todo {
-        return this.projects
-            .filter(project => project.id === id)
-            .pop();
+    getProjects(){
+        this.datastore.query(Project, {
+            page: { size: 10, number: 1}
+        }).subscribe(
+            (projects: Project[]) => console.log(projects)
+        );
     }
 }

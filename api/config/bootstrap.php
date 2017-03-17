@@ -215,6 +215,7 @@ Type::build('timestamp')
 
 Plugin::load('Crud'); //Load the CRUD plugin
 Plugin::load('ADmad/JwtAuth'); //Load the JWT Authentication plguin
+Plugin::load('Cors', ['bootstrap' => true, 'routes' => false]);
 
 /*
  * Only try to load DebugKit in development mode

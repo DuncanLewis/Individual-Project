@@ -1,4 +1,4 @@
-export class Project {
+/*export class Project {
 
     //ToDo: add in the rest of the properties of a project here
     id: string;
@@ -8,4 +8,4 @@ export class Project {
     constructor(values: Object = {}) {
         Object.assign(this, values)
     }
-}
+}*/

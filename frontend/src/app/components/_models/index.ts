@@ -7,3 +7,4 @@
  * Acts as a collection of exports for all _models
  */
 export * from './user';
+export * from './project';

@@ -1,31 +1,19 @@
 /**
- * Created by duncan on 16/03/2017.
+ * Created by duncan on 17/03/2017.
  */
 import { JsonApiModelConfig, JsonApiModel, Attribute, HasMany, BelongsTo } from 'angular2-jsonapi';
 
 @JsonApiModelConfig({
-    type: 'user'
+    type: 'project'
 })
 
-export class User extends JsonApiModel {
+export class Project extends JsonApiModel {
 
     @Attribute()
         id: string;
 
     @Attribute()
-        username: string;
-
-    @Attribute()
-        password: string;
-
-    @Attribute()
-        firstName: string;
-
-    @Attribute()
-        lastName: string;
-
-    @Attribute()
-        active: boolean;
+        name: string;
 
     @Attribute()
         created: string;

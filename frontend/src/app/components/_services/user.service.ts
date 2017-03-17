@@ -24,11 +24,12 @@ export class UserService {
 
     getUsers(): Observable<User[]> {
         // add authorization header with jwt token - uses same authentication (Bearer) as CakePHP API is expecting
-        let headers = new Headers({ 'Authorization': 'Bearer ' + this.authService.token });
+
+        let headers = new Headers({'Accept': 'application/vnd.api+json', 'Authorization': 'Bearer ' + this.authService.token });
         let options = new RequestOptions({ headers: headers });
 
         // get users from api
-        return this.http.get('/api/users', options)
+        return this.http.get('http://www.project.dev/users/', options)
             .map((response: Response) => response.json());
     }
 }

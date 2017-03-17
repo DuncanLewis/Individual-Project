@@ -23,6 +23,10 @@ use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Route\DashedRoute;
 
+const API_RESOURCES = [
+    'Projects',
+    'Users',
+];
 /**
  * The default class to use for all routes
  *
@@ -43,30 +47,39 @@ use Cake\Routing\Route\DashedRoute;
  */
 Router::defaultRouteClass(DashedRoute::class);
 
+
 Router::scope('/', function (RouteBuilder $routes) {
+    $routes->extensions(['json', 'xml']);
+    $routes->resources('Projects');
+    $routes->resources('Users');
+    Router::connect('/users/register', ['controller' => 'Users', 'action' => 'add']);
+    $routes->fallbacks('InflectedRoute');
+});
+
+//Router::scope('/', function (RouteBuilder $routes) {
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
      * its action called 'display', and we pass a param to select the view file
      * to use (in this case, src/Template/Pages/home.ctp)...
      */
-    $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
+    //$routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']);
 
     /**
      * ...and connect the rest of 'Pages' controller's URLs.
      */
-    $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
+    //$routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']);
 
-    $routes->extensions(['json']);
-    $routes->resources('Users');
-    $routes->resources('Projects');
-    $routes->resources('Applications');
+    //$routes->extensions(['json']);
+    //$routes->resources('Users');
+    //$routes->resources('Projects');
+    //$routes->resources('Applications');
 
 
     //Deal with unauthorized or forbidden actions
-    $routes->connect(  '/forbiden', ['action'=>'forbiden']);
-    $routes->connect(  '/unauthorized', ['action'=>'unauthorized']);
+    //$routes->connect(  '/forbiden', ['action'=>'forbiden']);
+    //$routes->connect(  '/unauthorized', ['action'=>'unauthorized']);
 
-    Router::connect('/users/register', ['controller' => 'Users', 'action' => 'add']);
+    //Router::connect('/users/register', ['controller' => 'Users', 'action' => 'add']);
 
     /**
      * Connect catchall routes for all controllers.
@@ -84,10 +97,10 @@ Router::scope('/', function (RouteBuilder $routes) {
      * You can remove these routes once you've connected the
      * routes you want in your application.
      */
-    $routes->fallbacks(DashedRoute::class);
+    //$routes->fallbacks(DashedRoute::class);
 
 
-});
+//});
 
 
 /**

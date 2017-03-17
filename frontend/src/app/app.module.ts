@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
+import { JsonApiModule } from 'angular2-jsonapi';
 
 //Used to create our fake backend
-import { fakeBackendProvider } from './components/_helpers/index';
-import { MockBackend, MockConnection } from '@angular/http/testing';
+/*import { fakeBackendProvider } from './components/_helpers/index';
+import { MockBackend, MockConnection } from '@angular/http/testing';*/
 import { BaseRequestOptions } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -33,6 +34,7 @@ import { HeaderComponent } from './shared/header/header.component';
         BrowserModule,
         FormsModule,
         HttpModule,
+        JsonApiModule,
         routing
     ],
     providers: [
@@ -41,8 +43,8 @@ import { HeaderComponent } from './shared/header/header.component';
         UserService,
 
         //ToDo: remove once proper backend is implemented
-        fakeBackendProvider,
-        MockBackend,
+        /*fakeBackendProvider,
+        MockBackend,*/
         BaseRequestOptions
     ],
     bootstrap: [AppComponent]
