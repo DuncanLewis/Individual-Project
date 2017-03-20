@@ -22,6 +22,9 @@
         "assets/styles.scss"
       ],
       "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/datatables.net/js/jquery.dataTables.js",
+        "assets/js/dataTables.bootstrap4.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

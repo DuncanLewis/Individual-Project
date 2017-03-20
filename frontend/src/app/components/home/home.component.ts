@@ -16,7 +16,7 @@ import { UserService } from '../_services/index';
 /**
  * @name HomeComponent
  *
- * Simply used for testing at this point, uses the user service to get a list of all users
+ * Forms the first login page, the dashboard
  */
 export class HomeComponent implements OnInit {
     users: User[] = [];
@@ -30,7 +30,4 @@ export class HomeComponent implements OnInit {
                 this.users = users;
             });
     }
-
-
-
 }

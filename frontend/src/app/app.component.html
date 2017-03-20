@@ -1,14 +1,15 @@
+<!-- Project tracker header element -->
 <pt-header></pt-header>
 
-<h1>
-  {{title}}
-</h1>
+<!-- Page container -->
+<div class="container-fluid">
+    <div class="row">
+        <pt-navigation></pt-navigation>
 
-
-<div class="jumbotron">
-    <div class="container">
-        <div class="col-sm-8 col-sm-offset-2">
+        <!-- Main output (all page content goes here) -->
+        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+            <!-- Router outlet - this is the element which Angular actually tells Angular to insert current route content -->
             <router-outlet></router-outlet>
-        </div>
+        </main>
     </div>
 </div>
