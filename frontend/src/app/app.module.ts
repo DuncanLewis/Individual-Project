@@ -16,12 +16,12 @@ import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 
 import { AuthGuard } from './components/_guards/index';
-import { AuthService, UserService } from './components/_services/index';
+import { AuthService, UserService, DatastoreService } from './components/_services/index';
 
 //Import our view components
 import { LoginComponent } from './components/login/index';
 import { HomeComponent } from './components/home/index';
-import { ProjectComponent } from './components/project/index';
+import { ProjectsModule } from './components/project/projects.module';
 
 //Import view helper components
 //ToDo: convert to a barrel?
@@ -35,8 +35,7 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
         HeaderComponent,
         NavigationComponent,
         LoginComponent,
-        HomeComponent,
-        ProjectComponent
+        HomeComponent
     ],
     //External imports, reflected in the imports above
     imports: [
@@ -46,13 +45,16 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
         JsonApiModule,
         NgbModule.forRoot(),
         DataTablesModule,
-        routing
+        routing,
+
+        ProjectsModule
     ],
     //Our custom services
     providers: [
         AuthGuard,
         AuthService,
         UserService,
+        DatastoreService,
 
         //ToDo: remove once proper backend is implemented
         /*fakeBackendProvider,

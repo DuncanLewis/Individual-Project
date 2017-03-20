@@ -16,7 +16,7 @@ import { User, Project } from '../_models/index';
 
     }
 })
-export class Datastore extends JsonApiDatastore {
+export class DatastoreService extends JsonApiDatastore {
 
     constructor(http: Http) {
         super(http);

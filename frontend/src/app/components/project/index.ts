@@ -6,4 +6,4 @@
  *
  * Acts as a collection of exports for all project files
  */
-export * from './project.component';
+export * from './projects.module';

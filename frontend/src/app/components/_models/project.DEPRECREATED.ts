@@ -4,7 +4,7 @@
 import { JsonApiModelConfig, JsonApiModel, Attribute, HasMany, BelongsTo } from 'angular2-jsonapi';
 
 @JsonApiModelConfig({
-    type: 'project'
+    type: 'projects'
 })
 
 export class Project extends JsonApiModel {
