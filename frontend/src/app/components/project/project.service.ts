@@ -31,11 +31,13 @@ export class Project extends JsonApiModel{
     new Project('H0056A', 'ERP 2016 critical country deployments Bundle 5', 'active')
 ];*/
 
-//let projectsPromise = Promise.resolve(PROJECTS);
+//let projectsPromise = Promise.resolve(this.datastore.query(Project).subscribe((projects: Project[]) => Promise.resolve(projects)));
 
 @Injectable()
 
 export class ProjectService {
+
+    projects: Project[];
     //getProjects() { return projectsPromise; }
 
     /*getProject(id: string | string) {
@@ -46,10 +48,9 @@ export class ProjectService {
     constructor(private datastore: DatastoreService) { }
 
     getProjects() {
-        this.datastore.query(Project, {
-        }).subscribe(
-            (projects: Project[]) => console.log(projects)
-        )
+        return this.datastore.query(Project);
+
+        //return Promise.resolve(this.datastore.query(Project).subscribe((projects: Project[]) => Promise.resolve(projects)));
     }
 
     getProject(id: string) {

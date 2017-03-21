@@ -24,7 +24,7 @@ class ProjectsController extends AppController
         'limit' => 10,
         'maxLimit' => 100,
         'fields' => [
-            'id', 'name'
+            'id', 'name', 'status', 'accenture_pm', 'hpe_pm', 'aldea_request_number', 'post_go_live_support', 'warranty_start', 'warranty_end', 'technical_go_live', 'business_go_live'
         ],
         'sortWhitelist' => [
             'id', 'name'

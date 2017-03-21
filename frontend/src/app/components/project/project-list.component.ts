@@ -16,19 +16,22 @@ export class ProjectListComponent implements OnInit{
     message: string = '';
     dtOptions: any = {};
 
-    projects: Project;
+    projects: Project[]
 
     constructor(
-        private service: ProjectService
+        private projectService: ProjectService
     ) {}
 
     someClickHandler(info: any): void {
         this.message = info.id;
     }
 
+
     ngOnInit(): void {
 
-        this.service.getProjects();
+        this.projectService.getProjects().subscribe(
+            projects => this.projects = projects
+        );
 
         this.dtOptions = {
             displayLength: 10,
@@ -45,5 +48,4 @@ export class ProjectListComponent implements OnInit{
             }*/
         };
     }
-
 }
