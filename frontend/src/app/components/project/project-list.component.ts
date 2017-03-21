@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 import { Project, ProjectService }  from './project.service';
 
 
@@ -16,7 +15,7 @@ export class ProjectListComponent implements OnInit{
     message: string = '';
     dtOptions: any = {};
 
-    projects: Project[]
+    projects: Project[];
 
     constructor(
         private projectService: ProjectService
@@ -27,12 +26,18 @@ export class ProjectListComponent implements OnInit{
     }
 
 
+    /**
+     * Initialise the view
+     */
     ngOnInit(): void {
 
+        //Call the projectService and subscribe to the results of getProjects
         this.projectService.getProjects().subscribe(
+            //Bind the returned values to projects variable for use in the view
             projects => this.projects = projects
         );
 
+        //Set options for the dataTables plugin
         this.dtOptions = {
             displayLength: 10,
             paginationType: 'full_numbers'
