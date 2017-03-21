@@ -50,8 +50,13 @@ Router::defaultRouteClass(DashedRoute::class);
 
 Router::scope('/', function (RouteBuilder $routes) {
     $routes->extensions(['json', 'xml']);
-    $routes->resources('Projects');
-    $routes->resources('Users');
+
+    foreach (API_RESOURCES as $apiResource) {
+        $routes->resources($apiResource, [
+            'inflect' => 'dasherize'
+        ]);
+    }
+
     Router::connect('/users/register', ['controller' => 'Users', 'action' => 'add']);
     $routes->fallbacks('InflectedRoute');
 });

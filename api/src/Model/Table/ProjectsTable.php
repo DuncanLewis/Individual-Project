@@ -56,12 +56,52 @@ class ProjectsTable extends Table
     public function validationDefault(Validator $validator)
     {
         $validator
-            ->uuid('id')
             ->allowEmpty('id', 'create');
 
         $validator
             ->requirePresence('name', 'create')
             ->notEmpty('name');
+
+        $validator
+            ->requirePresence('status', 'create')
+            ->notEmpty('status');
+
+        $validator
+            ->requirePresence('accenture_pm', 'create')
+            ->notEmpty('accenture_pm');
+
+        $validator
+            ->requirePresence('hpe_pm', 'create')
+            ->notEmpty('hpe_pm');
+
+        $validator
+            ->integer('aldea_request_number')
+            ->requirePresence('aldea_request_number', 'create')
+            ->notEmpty('aldea_request_number');
+
+        $validator
+            ->requirePresence('post_go_live_support', 'create')
+            ->notEmpty('post_go_live_support');
+
+        $validator
+            ->date('warranty_start')
+            ->requirePresence('warranty_start', 'create')
+            ->notEmpty('warranty_start');
+
+        $validator
+            ->date('warranty_end')
+            ->requirePresence('warranty_end', 'create')
+            ->notEmpty('warranty_end');
+
+        $validator
+            ->date('technical_go_live')
+            ->requirePresence('technical_go_live', 'create')
+            ->notEmpty('technical_go_live');
+
+        $validator
+            ->date('business_go_live')
+            ->requirePresence('business_go_live', 'create')
+            ->notEmpty('business_go_live');
 
         return $validator;
     }

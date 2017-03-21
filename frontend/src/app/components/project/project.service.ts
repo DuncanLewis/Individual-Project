@@ -34,6 +34,7 @@ export class Project extends JsonApiModel{
 //let projectsPromise = Promise.resolve(PROJECTS);
 
 @Injectable()
+
 export class ProjectService {
     //getProjects() { return projectsPromise; }
 

@@ -12,7 +12,7 @@
         "cakephp/plugin-installer": "*",
         "admad/cakephp-jwt-auth": "^2.0",
         "ozee31/cakephp-cors": "^1.0",
-        "neomerx/json-api": "^0.8.10",
+        "neomerx/json-api": "^1.0",
         "friendsofcake/crud": "^4.4"
     },
     "require-dev": {

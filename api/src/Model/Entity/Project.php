@@ -8,10 +8,18 @@ use Cake\ORM\Entity;
  *
  * @property string $id
  * @property string $name
+ * @property string $status
+ * @property string $accenture_pm
+ * @property string $hpe_pm
+ * @property int $aldea_request_number
+ * @property string $post_go_live_support
+ * @property \Cake\I18n\Time $warranty_start
+ * @property \Cake\I18n\Time $warranty_end
+ * @property \Cake\I18n\Time $technical_go_live
+ * @property \Cake\I18n\Time $business_go_live
  * @property \Cake\I18n\Time $created
  * @property \Cake\I18n\Time $modified
  *
- * @property \App\Model\Entity\Project[] $projects
  * @property \App\Model\Entity\Application[] $applications
  */
 class Project extends Entity
