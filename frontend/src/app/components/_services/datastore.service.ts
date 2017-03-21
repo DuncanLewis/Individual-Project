@@ -2,8 +2,10 @@
  * Created by duncan on 17/03/2017.
  */
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { Http, Headers } from '@angular/http';
 import { JsonApiDatastoreConfig, JsonApiDatastore } from 'angular2-jsonapi';
+
+import { AuthService } from './auth.service'
 
 import { User, Project } from '../_models/index';
 
@@ -18,8 +20,11 @@ import { User, Project } from '../_models/index';
 })
 export class DatastoreService extends JsonApiDatastore {
 
-    constructor(http: Http) {
+    constructor(
+        http: Http,
+        private authService: AuthService
+    ) {
         super(http);
+        this.headers = new Headers({'Authorization': 'Bearer ' + this.authService.token});
     }
-
 }

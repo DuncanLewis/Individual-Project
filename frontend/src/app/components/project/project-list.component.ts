@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { DatastoreService } from '../_services/index';
+
+import { Project, ProjectService }  from './project.service';
+
 
 declare var $: any;
 
@@ -14,11 +16,20 @@ export class ProjectListComponent implements OnInit{
     message: string = '';
     dtOptions: any = {};
 
+    projects: Project;
+
+    constructor(
+        private service: ProjectService
+    ) {}
+
     someClickHandler(info: any): void {
         this.message = info.id;
     }
 
     ngOnInit(): void {
+
+        this.service.getProjects();
+
         this.dtOptions = {
             displayLength: 10,
             paginationType: 'full_numbers'
