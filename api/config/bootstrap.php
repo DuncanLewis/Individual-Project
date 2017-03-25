@@ -216,6 +216,17 @@ Type::build('timestamp')
 Plugin::load('Crud'); //Load the CRUD plugin
 Plugin::load('ADmad/JwtAuth'); //Load the JWT Authentication plguin
 Plugin::load('Cors', ['bootstrap' => true, 'routes' => false]);
+Plugin::load('Crud');
+
+Plugin::load('Search');
+
+Plugin::load('CrudView');
+
+Plugin::load('BootstrapUI');
+
+Plugin::load('Search');
+
+
 
 /*
  * Only try to load DebugKit in development mode
@@ -225,4 +236,3 @@ if (Configure::read('debug')) {
     Plugin::load('DebugKit', ['bootstrap' => true]);
 }
 
-Plugin::load('Crud');

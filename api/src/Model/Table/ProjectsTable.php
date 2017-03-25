@@ -10,6 +10,7 @@ use Cake\Validation\Validator;
  * Projects Model
  *
  * @property \Cake\ORM\Association\BelongsToMany $Applications
+ * @property \Cake\ORM\Association\BelongsToMany $GatingBoards
  *
  * @method \App\Model\Entity\Project get($primaryKey, $options = [])
  * @method \App\Model\Entity\Project newEntity($data = null, array $options = [])
@@ -45,6 +46,11 @@ class ProjectsTable extends Table
             'targetForeignKey' => 'application_id',
             'joinTable' => 'projects_applications'
         ]);
+        $this->belongsToMany('GatingBoards', [
+            'foreignKey' => 'project_id',
+            'targetForeignKey' => 'gating_board_id',
+            'joinTable' => 'projects_gating_boards'
+        ]);
     }
 
     /**
@@ -61,6 +67,9 @@ class ProjectsTable extends Table
         $validator
             ->requirePresence('name', 'create')
             ->notEmpty('name');
+
+        $validator
+            ->allowEmpty('description');
 
         $validator
             ->requirePresence('status', 'create')

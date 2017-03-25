@@ -40,7 +40,7 @@ class DomainsFixture extends TestFixture
      */
     public $records = [
         [
-            'id' => '54395dc2-0bb9-4fa1-a0fa-35183aa5c9cb',
+            'id' => 'bd0bca01-19a4-44d2-a2a0-99c2359dcca3',
             'name' => 'Lorem ipsu',
             'abbreviation' => 'Lore',
             'description' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.'

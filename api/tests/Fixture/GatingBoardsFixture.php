@@ -39,11 +39,11 @@ class GatingBoardsFixture extends TestFixture
      */
     public $records = [
         [
-            'id' => '8e8bfe81-d7ee-49c0-842d-bbb65c2c63e7',
-            'date' => '2017-03-07',
+            'id' => '859331bd-54a0-4c3e-b1df-48b392153ece',
+            'date' => '2017-03-25',
             'status' => 'Lorem ipsum dolor sit amet',
-            'created' => '2017-03-07 13:52:33',
-            'modified' => '2017-03-07 13:52:33'
+            'created' => '2017-03-25 12:57:56',
+            'modified' => '2017-03-25 12:57:56'
         ],
     ];
 }

@@ -7,10 +7,12 @@ use Cake\ORM\Entity;
  * Application Entity
  *
  * @property string $id
+ * @property string $domain_id
  * @property string $name
  * @property string $abbreviation
  * @property string $description
- * @property string $domain_id
+ * @property \Cake\I18n\Time $created
+ * @property \Cake\I18n\Time $modified
  *
  * @property \App\Model\Entity\Domain $domain
  * @property \App\Model\Entity\Project[] $projects

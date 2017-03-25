@@ -4,27 +4,18 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Project Entity
+ * ProjectsApplication Entity
  *
  * @property string $id
- * @property string $name
- * @property string $description
- * @property string $status
- * @property string $accenture_pm
- * @property string $hpe_pm
- * @property int $aldea_request_number
- * @property string $post_go_live_support
- * @property \Cake\I18n\Time $warranty_start
- * @property \Cake\I18n\Time $warranty_end
- * @property \Cake\I18n\Time $technical_go_live
- * @property \Cake\I18n\Time $business_go_live
+ * @property string $project_id
+ * @property string $application_id
  * @property \Cake\I18n\Time $created
  * @property \Cake\I18n\Time $modified
  *
- * @property \App\Model\Entity\Application[] $applications
- * @property \App\Model\Entity\GatingBoard[] $gating_boards
+ * @property \App\Model\Entity\Project $project
+ * @property \App\Model\Entity\Application $application
  */
-class Project extends Entity
+class ProjectsApplication extends Entity
 {
 
     /**
@@ -40,4 +31,10 @@ class Project extends Entity
         '*' => true,
         'id' => false
     ];
+
+
+    protected function _getProjectIdApplicationName()
+    {
+        return $this->_properties['project_id'];
+    }
 }

@@ -9,6 +9,8 @@ use Cake\Validation\Validator;
 /**
  * GatingBoards Model
  *
+ * @property \Cake\ORM\Association\BelongsToMany $Projects
+ *
  * @method \App\Model\Entity\GatingBoard get($primaryKey, $options = [])
  * @method \App\Model\Entity\GatingBoard newEntity($data = null, array $options = [])
  * @method \App\Model\Entity\GatingBoard[] newEntities(array $data, array $options = [])
@@ -33,10 +35,16 @@ class GatingBoardsTable extends Table
         parent::initialize($config);
 
         $this->setTable('gating_boards');
-        $this->setDisplayField('id');
+        $this->setDisplayField('date');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+
+        $this->belongsToMany('Projects', [
+            'foreignKey' => 'gating_board_id',
+            'targetForeignKey' => 'project_id',
+            'joinTable' => 'projects_gating_boards'
+        ]);
     }
 
     /**

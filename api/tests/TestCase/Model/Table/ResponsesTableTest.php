@@ -25,9 +25,13 @@ class ResponsesTableTest extends TestCase
      */
     public $fixtures = [
         'app.responses',
-        'app.impacts',
-        'app.users',
-        'app.statuses'
+        'app.projects_gating_boards',
+        'app.projects',
+        'app.applications',
+        'app.domains',
+        'app.projects_applications',
+        'app.gating_boards',
+        'app.users'
     ];
 
     /**

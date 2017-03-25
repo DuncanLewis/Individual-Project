@@ -17,9 +17,9 @@ class ResponsesControllerTest extends IntegrationTestCase
      */
     public $fixtures = [
         'app.responses',
-        'app.impacts',
+        'app.projects_applications',
         'app.users',
-        'app.statuses'
+        'app.projects_gating_boards'
     ];
 
     /**

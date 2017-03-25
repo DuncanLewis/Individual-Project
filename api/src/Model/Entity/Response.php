@@ -7,16 +7,16 @@ use Cake\ORM\Entity;
  * Response Entity
  *
  * @property string $id
- * @property string $impact_id
+ * @property string $projects_gating_board_id
+ * @property string $projects_application_id
  * @property string $user_id
- * @property string $status_id
+ * @property string $response
  * @property string $comments
  * @property \Cake\I18n\Time $created
  * @property \Cake\I18n\Time $modified
  *
- * @property \App\Model\Entity\Impact $impact
- * @property \CakeDC\Users\Model\Entity\User $user
- * @property \App\Model\Entity\Status $status
+ * @property \App\Model\Entity\ProjectsGatingBoard[] $projects_gating_boards
+ * @property \App\Model\Entity\User $user
  */
 class Response extends Entity
 {

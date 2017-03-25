@@ -33,6 +33,19 @@ class User extends Entity
         'id' => false
     ];
 
+
+    /**
+     * getFullName
+     *
+     * Creates a virtual field to be used as display field for the User of firstName and lastName
+     *
+     * @return mixed
+     */
+    protected function _getFullName()
+    {
+        return $this->_properties['firstName'] . ' ' . $this->_properties['lastName'];
+    }
+
     /**
      * Fields that are excluded from JSON versions of the entity.
      *

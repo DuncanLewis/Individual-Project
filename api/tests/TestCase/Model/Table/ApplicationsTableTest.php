@@ -27,7 +27,9 @@ class ApplicationsTableTest extends TestCase
         'app.applications',
         'app.domains',
         'app.projects',
-        'app.projects_applications'
+        'app.projects_applications',
+        'app.gating_boards',
+        'app.projects_gating_boards'
     ];
 
     /**

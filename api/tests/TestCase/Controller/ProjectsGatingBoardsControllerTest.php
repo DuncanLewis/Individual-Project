@@ -1,13 +1,13 @@
 <?php
 namespace App\Test\TestCase\Controller;
 
-use App\Controller\GatingBoardsController;
+use App\Controller\ProjectsGatingBoardsController;
 use Cake\TestSuite\IntegrationTestCase;
 
 /**
- * App\Controller\GatingBoardsController Test Case
+ * App\Controller\ProjectsGatingBoardsController Test Case
  */
-class GatingBoardsControllerTest extends IntegrationTestCase
+class ProjectsGatingBoardsControllerTest extends IntegrationTestCase
 {
 
     /**
@@ -16,13 +16,14 @@ class GatingBoardsControllerTest extends IntegrationTestCase
      * @var array
      */
     public $fixtures = [
-        'app.gating_boards',
+        'app.projects_gating_boards',
         'app.projects',
         'app.applications',
         'app.domains',
-        'app.applications_domains',
         'app.projects_applications',
-        'app.projects_gating_boards'
+        'app.gating_boards',
+        'app.responses',
+        'app.users'
     ];
 
     /**

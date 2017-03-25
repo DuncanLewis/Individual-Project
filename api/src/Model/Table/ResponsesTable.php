@@ -9,9 +9,9 @@ use Cake\Validation\Validator;
 /**
  * Responses Model
  *
- * @property \Cake\ORM\Association\BelongsTo $Impacts
+ * @property \Cake\ORM\Association\BelongsTo $ProjectsGatingBoards
+ * @property \Cake\ORM\Association\BelongsTo $ProjectsApplications
  * @property \Cake\ORM\Association\BelongsTo $Users
- * @property \Cake\ORM\Association\BelongsTo $Statuses
  *
  * @method \App\Model\Entity\Response get($primaryKey, $options = [])
  * @method \App\Model\Entity\Response newEntity($data = null, array $options = [])
@@ -42,16 +42,16 @@ class ResponsesTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('Impacts', [
-            'foreignKey' => 'impact_id',
+        $this->belongsTo('ProjectsGatingBoards', [
+            'foreignKey' => 'projects_gating_board_id',
+            'joinType' => 'INNER'
+        ]);
+        $this->belongsTo('ProjectsApplications', [
+            'foreignKey' => 'projects_application_id',
             'joinType' => 'INNER'
         ]);
         $this->belongsTo('Users', [
             'foreignKey' => 'user_id',
-            'joinType' => 'INNER'
-        ]);
-        $this->belongsTo('Statuses', [
-            'foreignKey' => 'status_id',
             'joinType' => 'INNER'
         ]);
     }
@@ -69,6 +69,10 @@ class ResponsesTable extends Table
             ->allowEmpty('id', 'create');
 
         $validator
+            ->requirePresence('response', 'create')
+            ->notEmpty('response');
+
+        $validator
             ->allowEmpty('comments');
 
         return $validator;
@@ -83,9 +87,9 @@ class ResponsesTable extends Table
      */
     public function buildRules(RulesChecker $rules)
     {
-        $rules->add($rules->existsIn(['impact_id'], 'Impacts'));
+        $rules->add($rules->existsIn(['projects_gating_board_id'], 'ProjectsGatingBoards'));
+        $rules->add($rules->existsIn(['projects_application_id'], 'ProjectsApplications'));
         $rules->add($rules->existsIn(['user_id'], 'Users'));
-        $rules->add($rules->existsIn(['status_id'], 'Statuses'));
 
         return $rules;
     }

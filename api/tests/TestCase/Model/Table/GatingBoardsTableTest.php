@@ -24,7 +24,12 @@ class GatingBoardsTableTest extends TestCase
      * @var array
      */
     public $fixtures = [
-        'app.gating_boards'
+        'app.gating_boards',
+        'app.projects',
+        'app.applications',
+        'app.domains',
+        'app.projects_applications',
+        'app.projects_gating_boards'
     ];
 
     /**

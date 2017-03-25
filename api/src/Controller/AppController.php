@@ -15,6 +15,8 @@
 namespace App\Controller;
 
 use Cake\Controller\Controller;
+use Search\Manager;
+use Cake\Event\Event;
 
 /**
  * Application Controller
@@ -33,6 +35,7 @@ class AppController extends Controller
     {
         //parent::initialize();
         $this->loadComponent('RequestHandler');
+        $this->loadComponent('Flash');
         $this->loadComponent('Crud.Crud', [
             'actions' => [
                 'Crud.Index',
@@ -44,10 +47,18 @@ class AppController extends Controller
             'listeners' => [
                 'Crud.JsonApi',
                 'Crud.ApiPagination',
+                //'Crud.Search'
                 //'Crud.ApiQueryLog'
+
+                'CrudView.View',
+                'Crud.Redirect',
+                'Crud.RelatedModels',
+                // If you need searching
+               /* 'Crud.Search',
+                'CrudView.ViewSearch',*/
             ]
         ]);
-        $this->loadComponent('Auth', [
+        /*$this->loadComponent('Auth', [
             'storage' => 'Memory',
             'authenticate' => [
                 'Form' => [
@@ -65,7 +76,21 @@ class AppController extends Controller
             ],
             'unauthorizedRedirect' => false,
             'checkAuthIn' => 'Controller.initialize'
-        ]);
+        ]);*/
+    }
+
+    /**
+     * Before render callback.
+     *
+     * @param \Cake\Event\Event $event The beforeRender event.
+     * @return void
+     */
+    public function beforeRender(\Cake\Event\Event $event)
+    {
+        // For CakePHP 3.1+
+        if ($this->viewBuilder()->className() === null) {
+            $this->viewBuilder()->className('CrudView\View\CrudView');
+        }
     }
 
 }

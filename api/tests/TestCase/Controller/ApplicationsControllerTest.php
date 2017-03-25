@@ -18,8 +18,11 @@ class ApplicationsControllerTest extends IntegrationTestCase
     public $fixtures = [
         'app.applications',
         'app.domains',
+        'app.applications_domains',
         'app.projects',
-        'app.projects_applications'
+        'app.projects_applications',
+        'app.gating_boards',
+        'app.projects_gating_boards'
     ];
 
     /**
