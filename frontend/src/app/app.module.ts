@@ -1,11 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core'; // Core angular module
 import { FormsModule } from '@angular/forms'; // Core forms module
+import { ReactiveFormsModule } from "@angular/forms";
 import { HttpModule } from '@angular/http'; // Core HTTP Module
 import { RouterModule } from '@angular/router'; // Standard router module
 import { JsonApiModule } from 'angular2-jsonapi'; //Json API
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; //Angular bootstrap
 import { DataTablesModule } from 'angular-datatables'; //Angular datatables
+import { FormWizardModule } from 'angular2-wizard';
 
 //Used to create our fake backend
 /*import { fakeBackendProvider } from './components/_helpers/index';
@@ -41,10 +43,12 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
     imports: [
         BrowserModule,
         FormsModule,
+        ReactiveFormsModule,
         HttpModule,
         JsonApiModule,
         NgbModule.forRoot(),
         DataTablesModule,
+        FormWizardModule,
         routing,
 
         ProjectsModule

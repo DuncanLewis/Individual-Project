@@ -10,7 +10,9 @@ import { DatastoreService } from "../_services/datastore.service";
 })
 
 export class Project extends JsonApiModel{
-   //constructor(public id: string, public name: string, status: string) { }
+
+    //constructor(public id: string, public name: string, status: string) { }
+
     @Attribute()
         id: string;
 

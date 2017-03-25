@@ -1,9 +1,9 @@
-<h1>Project List <small>56 total</small></h1>
+<h1>Project List <small>56 total</small> <a routerLink='/projects/add' class="btn btn-primary float-right">Add New Project</a></h1>
 
 <p class="text-danger">You clicked on: <strong>{{ message }}</strong></p>
 
-
-<table datatable [dtOptions]="dtOptions" class="table table-striped table-bordered table-responsive table-hover">
+<!-- datatable="ng" [dtOptions]="dtOptions" -->
+<table  class="table table-striped table-bordered table-responsive table-hover">
     <thead>
     <tr>
         <th>ID</th>

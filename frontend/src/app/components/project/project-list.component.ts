@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Project, ProjectService }  from './project.service';
 
 
-declare var $: any;
+//declare var $: any;
 
 @Component({
     moduleId: module.id,
@@ -36,6 +36,8 @@ export class ProjectListComponent implements OnInit{
             //Bind the returned values to projects variable for use in the view
             projects => this.projects = projects
         );
+
+
 
         //Set options for the dataTables plugin
         this.dtOptions = {

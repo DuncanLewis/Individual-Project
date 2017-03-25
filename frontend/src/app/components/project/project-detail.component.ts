@@ -16,8 +16,6 @@ import { Project, ProjectService }  from './project.service';
 })
 export class ProjectDetailComponent implements OnInit {
     @HostBinding('@routeAnimation') routeAnimation = true;
-    @HostBinding('style.display')   display = 'block';
-    @HostBinding('style.position')  position = 'absolute';
 
     project: Project;
 
