@@ -24,19 +24,20 @@ export class ProjectDetailComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
         private router: Router,
-        private service: ProjectService
+        private projectService: ProjectService
     ) {}
 
+    getProject(id) {
+        this.projectService.getProject(id).subscribe(
+            project => this.project = project
+        )
+    }
+
     ngOnInit() {
-        /*this.route.params
-        // (+) converts string 'id' to a number
-            .map((params: Params) => this.service.getProject(params['id']))
-            .subscribe((project: Project) => this.project = project);*/
 
         this.route.params.subscribe(params => {
             this.id = params['id'];
-
-            let project = this.service.getProject(params['id']);
+            this.getProject(this.id);
         });
     }
 

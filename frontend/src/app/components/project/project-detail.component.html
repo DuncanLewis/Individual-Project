@@ -1,170 +1,156 @@
+<section *ngIf="project">
+    <h2>Viewing Project {{ project.nokia_project_id}}</h2>
+    <h3>"{{ project.name }}"</h3>
+</section>
 
-    <div *ngIf="project">
-        <h2>Viewing Project {{ project.id }}</h2>
-        <h3>"{{ project.name }}"</h3>
-        <div>
-            <label>Name: </label>
-            <input [(ngModel)]="project.name" placeholder="name"/>
+
+<section class="row bs-wizard" style="border-bottom:0;">
+
+    <div class="col-sm-2 bs-wizard-step complete">
+        <div class="text-center bs-wizard-stepnum">G-2</div>
+        <div class="progress">
+            <div class="progress-bar"></div>
         </div>
-        <div>
-            <label>Status: </label>
-            <input [(ngModel)]="project.status" placeholder="status"/>
-        </div>
-        <p>
-            <button (click)="gotoProjects()">Back</button>
-        </p>
-
-
+        <a href="javascript:;" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center">G-2</div>
     </div>
 
-
-    <section class="row bs-wizard" style="border-bottom:0;">
-
-        <div class="col-sm-2 bs-wizard-step complete">
-            <div class="text-center bs-wizard-stepnum">G-2</div>
-            <div class="progress">
-                <div class="progress-bar"></div>
-            </div>
-            <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">G-2</div>
+    <div class="col-sm-2 bs-wizard-step complete">
+        <div class="text-center bs-wizard-stepnum">G-1</div>
+        <div class="progress">
+            <div class="progress-bar"></div>
         </div>
+        <a href="javascript:;" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center">G-1</div>
+    </div>
 
-        <div class="col-sm-2 bs-wizard-step complete">
-            <div class="text-center bs-wizard-stepnum">G-1</div>
-            <div class="progress">
-                <div class="progress-bar"></div>
-            </div>
-            <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">G-1</div>
+    <div class="col-sm-2 bs-wizard-step complete"><!-- complete -->
+        <div class="text-center bs-wizard-stepnum">G3</div>
+        <div class="progress">
+            <div class="progress-bar"></div>
         </div>
+        <a href="javascript:;" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center">G3</div>
+    </div>
 
-        <div class="col-sm-2 bs-wizard-step complete"><!-- complete -->
-            <div class="text-center bs-wizard-stepnum">G3</div>
-            <div class="progress">
-                <div class="progress-bar"></div>
-            </div>
-            <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">G3</div>
+    <div class="col-sm-2 bs-wizard-step active"><!-- complete -->
+        <div class="text-center bs-wizard-stepnum">G5</div>
+        <div class="progress">
+            <div class="progress-bar"></div>
         </div>
+        <a href="javascript:;" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center">G5</div>
+    </div>
 
-        <div class="col-sm-2 bs-wizard-step active"><!-- complete -->
-            <div class="text-center bs-wizard-stepnum">G5</div>
-            <div class="progress">
-                <div class="progress-bar"></div>
-            </div>
-            <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">G5</div>
+    <div class="col-sm-2 bs-wizard-step disabled"><!-- active -->
+        <div class="text-center bs-wizard-stepnum">G6</div>
+        <div class="progress">
+            <div class="progress-bar"></div>
         </div>
+        <a href="javascript:;" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center">G6</div>
+    </div>
 
-        <div class="col-sm-2 bs-wizard-step disabled"><!-- active -->
-            <div class="text-center bs-wizard-stepnum">G6</div>
-            <div class="progress">
-                <div class="progress-bar"></div>
-            </div>
-            <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">G6</div>
+    <div class="col-sm-2 bs-wizard-step disabled"><!-- active -->
+        <div class="text-center bs-wizard-stepnum">G7</div>
+        <div class="progress">
+            <div class="progress-bar"></div>
         </div>
-
-        <div class="col-sm-2 bs-wizard-step disabled"><!-- active -->
-            <div class="text-center bs-wizard-stepnum">G7</div>
-            <div class="progress">
-                <div class="progress-bar"></div>
-            </div>
-            <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">G7</div>
-        </div>
-    </section>
+        <a href="javascript:;" class="bs-wizard-dot"></a>
+        <div class="bs-wizard-info text-center">G7</div>
+    </div>
+</section>
 
 
-    <ngb-tabset>
-        <ngb-tab id="tab-overview" title="Overview" class="nav-fill nav-justified">
-            <template ngbTabContent>
+<ngb-tabset>
+    <ngb-tab id="tab-overview" title="Overview" class="nav-fill nav-justified">
+        <template ngbTabContent>
 
 
-                <div class="card-deck mt-4">
+            <div class="card-deck mt-4">
 
-                    <div class="card card-default text-center">
-                        <div class="card-block">
-                            <h3 class="card-title">3</h3>
-                            <small>Days until gate</small>
-                        </div>
-                    </div>
-
-                    <div class="card card-default text-center">
-                        <div class="card-block">
-                            <h3 class="card-title">2</h3>
-                            <small>Pending Approvals</small>
-                        </div>
-                    </div>
-
-                    <div class="card card-success card-inverse text-center">
-                        <div class="card-block">
-                            <h3 class="card-title">0</h3>
-                            <small>Outstanding Issues</small>
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <div class="row mt-4">
-
-                    <div class="col-sm-3">
-
-                        <div class="card">
-                            <div class="card-header">
-                                <a (click)="t.select('tab-approvals')">Project Approvals</a>
-                            </div>
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item list-group-item-success">Blue Planet - Approved</li>
-                                <li class="list-group-item list-group-item-success">SRM - Approved</li>
-                                <li class="list-group-item list-group-item-warning">eSpares - Waiting</li>
-                            </ul>
-                        </div>
-
+                <div class="card card-default text-center">
+                    <div class="card-block">
+                        <h3 class="card-title">3</h3>
+                        <small>Days until gate</small>
                     </div>
                 </div>
 
+                <div class="card card-default text-center">
+                    <div class="card-block">
+                        <h3 class="card-title">2</h3>
+                        <small>Pending Approvals</small>
+                    </div>
+                </div>
 
-            </template>
-        </ngb-tab>
-        <ngb-tab id="tab-calendar" title="Calendar">
-            <template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee
-                squid.
+                <div class="card card-success card-inverse text-center">
+                    <div class="card-block">
+                        <h3 class="card-title">0</h3>
+                        <small>Outstanding Issues</small>
+                    </div>
+                </div>
 
-            </template>
-        </ngb-tab>
-        <ngb-tab id="tab-risk-log" title="Risk Log">
-            <template ngbTabContent>
-                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
-                    retro synth
-                    master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
-                    retro keffiyeh
-                    dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
-                    salvia cillum
-                    iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-            </template>
-        </ngb-tab>
-        <ngb-tab id="tab-documentation" title="Documentation">
-            <template ngbTabContent>
-                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
-                    retro synth
-                    master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
-                    retro keffiyeh
-                    dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
-                    salvia cillum
-                    iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-            </template>
-        </ngb-tab>
-        <ngb-tab id="tab-approvals" title="Approvals">
-            <template ngbTabContent>
-                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
-                    retro synth
-                    master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
-                    retro keffiyeh
-                    dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
-                    salvia cillum
-                    iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
-            </template>
-        </ngb-tab>
-    </ngb-tabset>
+            </div>
+
+
+            <div class="row mt-4">
+
+                <div class="col-sm-3">
+
+                    <div class="card">
+                        <div class="card-header">
+                            <a (click)="t.select('tab-approvals')">Project Approvals</a>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item list-group-item-success">Blue Planet - Approved</li>
+                            <li class="list-group-item list-group-item-success">SRM - Approved</li>
+                            <li class="list-group-item list-group-item-warning">eSpares - Waiting</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </template>
+    </ngb-tab>
+    <ngb-tab id="tab-calendar" title="Calendar">
+        <template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee
+            squid.
+
+        </template>
+    </ngb-tab>
+    <ngb-tab id="tab-risk-log" title="Risk Log">
+        <template ngbTabContent>
+            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+                retro synth
+                master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
+                retro keffiyeh
+                dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
+                salvia cillum
+                iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+        </template>
+    </ngb-tab>
+    <ngb-tab id="tab-documentation" title="Documentation">
+        <template ngbTabContent>
+            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+                retro synth
+                master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
+                retro keffiyeh
+                dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
+                salvia cillum
+                iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+        </template>
+    </ngb-tab>
+    <ngb-tab id="tab-approvals" title="Approvals">
+        <template ngbTabContent>
+            <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+                retro synth
+                master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
+                retro keffiyeh
+                dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
+                salvia cillum
+                iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+        </template>
+    </ngb-tab>
+</ngb-tabset>

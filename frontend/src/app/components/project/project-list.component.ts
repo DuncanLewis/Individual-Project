@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { Project, ProjectService }  from './project.service';
 
 
@@ -12,21 +12,25 @@ import { Project, ProjectService }  from './project.service';
 
 export class ProjectListComponent implements OnInit{
 
-    message: string = '';
     dtOptions: any = {};
-
     projects: Project[];
 
     constructor(
+        private router: Router,
         private projectService: ProjectService
     ) {}
 
-    someClickHandler(info: any): void {
-        this.message = info.id;
+    /**
+     * onSelect
+     *
+     * Handles a project being selected from the project list, forwards user to the project eetail view
+     * @param project
+     */
+    onSelect(project: Project) {
+        this.router.navigate(['/project', project.id]);
     }
 
-
-    getAllPosts() {
+    getAllProjects() {
         this.projectService.getProjects().subscribe(
             //Bind the returned values to projects variable for use in the view
             projects => this.projects = projects
@@ -39,7 +43,7 @@ export class ProjectListComponent implements OnInit{
     ngOnInit(): void {
 
         //Call the projectService and subscribe to the results of getProjects
-        this.getAllPosts();
+        this.getAllProjects();
 
 
         //Set options for the dataTables plugin

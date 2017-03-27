@@ -58,10 +58,7 @@ export class ProjectService {
      * @param id
      */
     getProject(id: string) {
-        this.datastore.findRecord(Project, id).subscribe(
-            (project: Project) => project
-        );
-
+        return this.datastore.findRecord(Project, id);
     }
 
 
