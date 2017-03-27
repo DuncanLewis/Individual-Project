@@ -19,7 +19,7 @@ class UsersController extends AppController
     public function initialize()
     {
         parent::initialize();
-        $this->Auth->allow(['add', 'token']);
+        $this->Auth->allow(['add', 'token', 'login']);
     }
 
     /**
@@ -47,5 +47,10 @@ class UsersController extends AppController
             ],
             '_serialize' => ['success', 'data']
         ]);
+    }
+
+
+    public function login() {
+
     }
 }

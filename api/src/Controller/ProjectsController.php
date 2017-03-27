@@ -2,6 +2,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Event\Event;
 
 /**
  * Projects Controller
@@ -30,5 +31,19 @@ class ProjectsController extends AppController
             'id', 'name'
         ]
     ];
+
+
+    public function index()
+    {
+        $this->Crud->on('beforeFind', function (Event $event) {
+            $event->subject()->query->contain([
+                'Domains',
+                'Applications',
+            ]);
+        });
+
+        return $this->Crud->execute();
+
+    }
 
 }

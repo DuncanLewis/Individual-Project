@@ -26,17 +26,20 @@ export class ProjectListComponent implements OnInit{
     }
 
 
+    getAllPosts() {
+        this.projectService.getProjects().subscribe(
+            //Bind the returned values to projects variable for use in the view
+            projects => this.projects = projects
+        );
+    }
+
     /**
      * Initialise the view
      */
     ngOnInit(): void {
 
         //Call the projectService and subscribe to the results of getProjects
-        this.projectService.getProjects().subscribe(
-            //Bind the returned values to projects variable for use in the view
-            projects => this.projects = projects
-        );
-
+        this.getAllPosts();
 
 
         //Set options for the dataTables plugin

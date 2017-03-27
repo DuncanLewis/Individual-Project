@@ -34,7 +34,7 @@ export class Project extends JsonApiModel{
  */
 export class ProjectService {
 
-    projects: Project[];
+    //projects: Project[];
 
     constructor(private datastore: DatastoreService) { }
 
@@ -46,7 +46,9 @@ export class ProjectService {
      * @returns {Observable<Project[]>}
      */
     getProjects() {
-        return this.datastore.query(Project);
+        return this.datastore.query(Project, {
+            include: 'applications',
+        });
     }
 
     /**

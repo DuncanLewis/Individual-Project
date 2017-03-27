@@ -25,12 +25,13 @@ use Cake\Routing\Route\DashedRoute;
 
 const API_RESOURCES = [
     'Projects',
-    'Users',
+    //'Users',
     'Domains',
     'Applications',
     'ProjectsApplications',
     'ProjectsGatingBoards',
-    'Responses'
+    'Responses',
+    'Risks'
 ];
 Router::defaultRouteClass(DashedRoute::class);
 
@@ -45,5 +46,7 @@ Router::scope('/', function (RouteBuilder $routes) {
 
     $routes->fallbacks('DashedRoute');
 });
+
+Router::connect('/users/login', ['controller' => 'Users', 'action' => 'login']);
 
 Plugin::routes();

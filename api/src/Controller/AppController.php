@@ -58,7 +58,7 @@ class AppController extends Controller
                 'CrudView.ViewSearch',*/
             ]
         ]);
-        /*$this->loadComponent('Auth', [
+        $this->loadComponent('Auth', [
             'storage' => 'Memory',
             'authenticate' => [
                 'Form' => [
@@ -76,7 +76,7 @@ class AppController extends Controller
             ],
             'unauthorizedRedirect' => false,
             'checkAuthIn' => 'Controller.initialize'
-        ]);*/
+        ]);
     }
 
     /**
