@@ -6,5 +6,6 @@
  *
  * Acts as a collection of exports for all _models
  */
+export * from './application';
 export * from './user';
-export * from './project.DEPRECREATED';
+export * from './project';

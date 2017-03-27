@@ -6,32 +6,44 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { slideInDownAnimation } from '../../shared/animations';
+import {Project} from '../_models/project';
 
 
-import { Project, ProjectService }  from './project.service';
+import { DatastoreService }  from '../_services/datastore.service';
+
 
 @Component({
     templateUrl: './project-detail.component.html',
-    animations: [ slideInDownAnimation ]
+    animations: [ slideInDownAnimation ],
+    providers: [DatastoreService]
 })
 export class ProjectDetailComponent implements OnInit {
     @HostBinding('@routeAnimation') routeAnimation = true;
 
-    project: Project;
-
     private id;
+    project;
 
     constructor(
         private route: ActivatedRoute,
         private router: Router,
-        private projectService: ProjectService
+        private datastoreService: DatastoreService
     ) {}
 
-    getProject(id) {
-        this.projectService.getProject(id).subscribe(
-            project => this.project = project
-        )
-    }
+
+    /**
+     * getProject
+     *
+     * Gets a SINGLE project, with a given ID, using the JsonAPI Component to query project model backend
+     * @param id
+     */
+    getProject(id: string) {
+         this.datastoreService.findRecord(Project, id, {
+            include: 'applications'
+         }).subscribe(
+             //(project: Project) => console.log(project)
+             project => this.project = project
+         );
+     }
 
     ngOnInit() {
 
@@ -42,10 +54,10 @@ export class ProjectDetailComponent implements OnInit {
     }
 
     gotoProjects() {
-        let projectId = this.project ? this.project.id : null;
+        //let projectId = this.project ? this.project.id : null;
         // Pass along the project id if available
         // so that the ProjectList component can select that project.
         // Include a junk 'foo' property for fun.
-        this.router.navigate(['/projects', { id: projectId}]);
+        //this.router.navigate(['/projects', { id: projectId}]);
     }
 }

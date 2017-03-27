@@ -1,23 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Project, ProjectService }  from './project.service';
+import { DatastoreService }  from '../_services/datastore.service';
+
+import { Project } from '../_models/project';
 
 
 //declare var $: any;
 
 @Component({
     moduleId: module.id,
-    templateUrl: 'project-list.component.html'
+    templateUrl: 'project-list.component.html',
+    providers: [DatastoreService]
 })
 
 export class ProjectListComponent implements OnInit{
 
     dtOptions: any = {};
-    projects: Project[];
+    projects;
 
     constructor(
         private router: Router,
-        private projectService: ProjectService
+        private datastoreService: DatastoreService,
     ) {}
 
     /**
@@ -31,7 +34,6 @@ export class ProjectListComponent implements OnInit{
     }
 
     getAllProjects() {
-        this.projectService.getProjects().subscribe(
             //Bind the returned values to projects variable for use in the view
             projects => this.projects = projects
         );
@@ -43,7 +45,6 @@ export class ProjectListComponent implements OnInit{
     ngOnInit(): void {
 
         //Call the projectService and subscribe to the results of getProjects
-        this.getAllProjects();
 
 
         //Set options for the dataTables plugin

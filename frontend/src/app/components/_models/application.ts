@@ -1,14 +1,12 @@
 /**
- * Created by duncan on 17/03/2017.
+ * Created by duncan on 27/03/2017.
  */
 import { JsonApiModelConfig, JsonApiModel, Attribute, HasMany, BelongsTo } from 'angular2-jsonapi';
 
 @JsonApiModelConfig({
-    type: 'projects'
+    type: 'applications'
 })
-
-export class Project extends JsonApiModel {
-
+export class Application extends JsonApiModel{
     @Attribute()
         id: string;
 
@@ -16,11 +14,8 @@ export class Project extends JsonApiModel {
         name: string;
 
     @Attribute()
-        created: string;
+        abbreviation: string;
 
     @Attribute()
-        modified: string;
-
-    @Attribute()
-        token: string;
+        description: string;
 }

@@ -38,7 +38,8 @@ class ProjectsController extends AppController
         $this->Crud->on('beforeFind', function (Event $event) {
             $event->subject()->query->contain([
                 'Domains',
-                'Applications',
+                'GatingBoards',
+                'Applications'
             ]);
         });
 

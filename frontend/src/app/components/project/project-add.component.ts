@@ -5,8 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder }
     from '@angular/forms';
 
-
-import { Project, ProjectService }  from './project.service';
+import { DatastoreService }  from '../_services/datastore.service';
 
 
 @Component({
@@ -15,7 +14,7 @@ import { Project, ProjectService }  from './project.service';
 })
 
 export class ProjectAddComponent implements OnInit {
-    projects: Project[];
+    projects;
 
     form: FormGroup;
 

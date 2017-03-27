@@ -18,7 +18,7 @@ import { AppComponent } from './app.component';
 import { routing } from './app.routing';
 
 import { AuthGuard } from './components/_guards/index';
-import { AuthService, UserService, DatastoreService } from './components/_services/index';
+import { AuthService, UserService } from './components/_services/index';
 
 //Import our view components
 import { LoginComponent } from './components/login/index';
@@ -58,7 +58,7 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
         AuthGuard,
         AuthService,
         UserService,
-        DatastoreService,
+        //DatastoreService,
 
         //ToDo: remove once proper backend is implemented
         /*fakeBackendProvider,
