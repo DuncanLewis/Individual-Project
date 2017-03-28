@@ -36,10 +36,22 @@ class ProjectsTable extends Table
         parent::initialize($config);
 
         $this->setTable('projects');
-        $this->setDisplayField('id');
+        $this->setDisplayField('nokia_project_id');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
+
+        /**
+         * belongsToMany CurrentGate
+         *
+         * This creates a virtual entity which is accessible by the API and uses special code in the beforeFind
+         */
+        $this->belongsToMany('CurrentGate', [
+            'className' => 'GatingBoards',
+            'foreignKey' => 'project_id',
+            'targetForeignKey' => 'gating_board_id',
+            'joinTable' => 'projects_gating_boards'
+        ]);
 
         $this->belongsToMany('Applications', [
             'foreignKey' => 'project_id',
@@ -113,5 +125,10 @@ class ProjectsTable extends Table
             ->notEmpty('business_go_live');
 
         return $validator;
+    }
+
+
+    public function findCurrentGate(Query $query, array $options) {
+
     }
 }

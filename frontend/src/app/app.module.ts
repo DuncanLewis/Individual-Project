@@ -8,6 +8,7 @@ import { JsonApiModule } from 'angular2-jsonapi'; //Json API
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; //Angular bootstrap
 import { DataTablesModule } from 'angular-datatables'; //Angular datatables
 import { FormWizardModule } from 'angular2-wizard';
+import { MomentModule } from 'angular2-moment';
 
 //Used to create our fake backend
 /*import { fakeBackendProvider } from './components/_helpers/index';
@@ -50,6 +51,7 @@ import { NavigationComponent } from './shared/navigation/navigation.component';
         DataTablesModule,
         FormWizardModule,
         routing,
+        MomentModule,
 
         ProjectsModule
     ],

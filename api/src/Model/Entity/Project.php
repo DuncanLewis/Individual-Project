@@ -2,6 +2,7 @@
 namespace App\Model\Entity;
 
 use Cake\ORM\Entity;
+use Cake\ORM\TableRegistry;
 
 /**
  * Project Entity
@@ -40,4 +41,10 @@ class Project extends Entity
         '*' => true,
         'id' => false
     ];
+
+
+    protected function _getCurrentGate()
+    {
+
+    }
 }

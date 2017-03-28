@@ -7,6 +7,7 @@ import { FormsModule }    from '@angular/forms';
 import { ReactiveFormsModule }    from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'; //Angular bootstrap
 import { JsonApiModule } from 'angular2-jsonapi'; //Json API
+import { MomentModule } from 'angular2-moment';
 
 import { ProjectRoutingModule } from "./projects-routing.module";
 
@@ -28,6 +29,7 @@ import { ProjectAddComponent }  from './project-add.component';
         ReactiveFormsModule,
         FormWizardModule,
         DataTablesModule,
+        MomentModule,
         NgbModule,
         ProjectRoutingModule,
         JsonApiModule

@@ -10,7 +10,9 @@ import { AuthService } from './auth.service'
 import {
     Application,
     User,
-    Project
+    Project,
+    Risk,
+    GatingBoard
     }
     from '../_models/index';
 
@@ -20,7 +22,8 @@ import {
     models: {
         users: User,
         applications: Application,
-        projects: Project
+        projects: Project,
+        gating_boards: GatingBoard
 
     }
 })

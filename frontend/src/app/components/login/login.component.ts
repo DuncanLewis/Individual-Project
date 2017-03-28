@@ -30,6 +30,14 @@ export class LoginComponent implements OnInit {
         this.authService.logout();
     }
 
+    /**
+     * login
+     *
+     * Handles the login action, sets loading variable to true and then calls the authentication
+     * service with username and password supplied
+     *
+     * If login successful navigations to the homepage, if not display error
+     */
     login() {
         this.loading = true;
         this.authService.login(this.model.username, this.model.password)

@@ -37,7 +37,6 @@ class ProjectsController extends AppController
     {
         $this->Crud->on('beforeFind', function (Event $event) {
             $event->subject()->query->contain([
-                'Domains',
                 'GatingBoards',
                 'Applications'
             ]);
@@ -45,6 +44,48 @@ class ProjectsController extends AppController
 
         return $this->Crud->execute();
 
+    }
+
+    /**
+     * view method for projects
+     *
+     * Modifies the CRUD
+     *
+     * @return mixed
+     */
+    public function view()
+    {
+        $this->Crud->on('beforeFind', function(Event $event) {
+            $event->getSubject()->query
+                ->contain([
+                    'CurrentGate' => [
+                        'strategy' => 'select',
+                        'queryBuilder' => function ($q) {
+                            return $q->order(['CurrentGate.date' =>'DESC'])->limit(1);
+                        }
+                    ]
+                ]);
+        });
+
+
+        /*$this->Crud->on('afterFind', function(Event $event) {
+            $this->log("Found item: " . $event->getSubject()->entity . " in the database");
+
+            //print_r($event->getSubject()->entity->gating_boards);
+
+           /* $gatingBoards = $event->getSubject()->entity->gating_boards;
+
+            $this->Crud->action()->findMethod('my_custom_finder');
+
+            foreach ($gatingBoards as $gatingBoard) {
+                $date = $gatingBoard['date'];
+
+                var_dump($date);
+            }*/
+
+        //});
+
+        return $this->Crud->execute();
     }
 
 }

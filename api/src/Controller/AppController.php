@@ -58,7 +58,7 @@ class AppController extends Controller
                 'CrudView.ViewSearch',*/
             ]
         ]);
-        $this->loadComponent('Auth', [
+        /*$this->loadComponent('Auth', [
             'storage' => 'Memory',
             'authenticate' => [
                 'Form' => [
@@ -76,7 +76,7 @@ class AppController extends Controller
             ],
             'unauthorizedRedirect' => false,
             'checkAuthIn' => 'Controller.initialize'
-        ]);
+        ]);*/
     }
 
     /**
@@ -91,6 +91,9 @@ class AppController extends Controller
         if ($this->viewBuilder()->className() === null) {
             $this->viewBuilder()->className('CrudView\View\CrudView');
         }
+
+        $action = $this->Crud->action();
+        $action->config('scaffold.site_title', 'HPE Project Tracker - Admin');
     }
 
 }

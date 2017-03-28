@@ -6,7 +6,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
 import { slideInDownAnimation } from '../../shared/animations';
-import {Project} from '../_models/project';
+import { Project } from '../_models/project';
 
 
 import { DatastoreService }  from '../_services/datastore.service';
@@ -26,6 +26,7 @@ export class ProjectDetailComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
         private router: Router,
+        //private allGates:any = {},
         private datastoreService: DatastoreService
     ) {}
 
@@ -38,7 +39,7 @@ export class ProjectDetailComponent implements OnInit {
      */
     getProject(id: string) {
          this.datastoreService.findRecord(Project, id, {
-            include: 'applications'
+            include: 'applications, gating_boards'
          }).subscribe(
              //(project: Project) => console.log(project)
              project => this.project = project

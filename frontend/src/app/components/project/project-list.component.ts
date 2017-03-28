@@ -33,8 +33,19 @@ export class ProjectListComponent implements OnInit{
         this.router.navigate(['/project', project.id]);
     }
 
-    getAllProjects() {
-            //Bind the returned values to projects variable for use in the view
+
+    /**
+     * getProjects
+     *
+     * Gets all projects, using the JsonAPI component to query the project model in the backend
+     *
+     * @returns {Observable<Project[]>}
+     */
+    getProjects() {
+        this.datastoreService.query(Project, {
+            include: 'applications'
+        }).subscribe(
+           // (projects: Project[]) => projects
             projects => this.projects = projects
         );
     }
@@ -45,6 +56,7 @@ export class ProjectListComponent implements OnInit{
     ngOnInit(): void {
 
         //Call the projectService and subscribe to the results of getProjects
+        this.getProjects();
 
 
         //Set options for the dataTables plugin

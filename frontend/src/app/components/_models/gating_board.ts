@@ -1,22 +1,25 @@
 /**
- * Created by duncan on 17/03/2017.
+ * Created by duncan on 28/03/2017.
  */
-import { Application, GatingBoard } from './index';
+import { Project } from './index';
 import { JsonApiModelConfig, JsonApiModel, Attribute, HasMany, BelongsTo } from 'angular2-jsonapi';
 
 @JsonApiModelConfig({
-    type: 'projects'
+    type: 'gating_boards'
 })
-export class Project extends JsonApiModel {
+export class GatingBoard extends JsonApiModel {
 
     @Attribute()
         id: string;
 
     @Attribute()
-        name: string;
+        date: string;
 
     @Attribute()
         status: string;
+
+    @Attribute()
+        gate: string;
 
     @Attribute()
         description: string;
@@ -29,8 +32,6 @@ export class Project extends JsonApiModel {
 
 
     @HasMany()
-        applications: Application[];
-
-    @BelongsTo()
-        gating_boards: GatingBoard[];
+        projects: Project[];
+    
 }

@@ -9,3 +9,5 @@
 export * from './application';
 export * from './user';
 export * from './project';
+export * from './gating_board';
+export * from './risk';
