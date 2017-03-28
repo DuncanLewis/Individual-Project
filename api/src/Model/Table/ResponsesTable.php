@@ -42,10 +42,6 @@ class ResponsesTable extends Table
 
         $this->addBehavior('Timestamp');
 
-        $this->belongsTo('ProjectsGatingBoards', [
-            'foreignKey' => 'projects_gating_board_id',
-            'joinType' => 'INNER'
-        ]);
         $this->belongsTo('ProjectsApplications', [
             'foreignKey' => 'projects_application_id',
             'joinType' => 'INNER'
@@ -54,6 +50,8 @@ class ResponsesTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
+
+        $this->belongsTo('ProjectsGatingBoards');
     }
 
     /**

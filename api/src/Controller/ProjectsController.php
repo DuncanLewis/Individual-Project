@@ -56,7 +56,7 @@ class ProjectsController extends AppController
     public function view()
     {
         $this->Crud->on('beforeFind', function(Event $event) {
-            $event->getSubject()->query
+            /*$event->getSubject()->query
                 ->contain([
                     'CurrentGate' => [
                         'strategy' => 'select',
@@ -64,7 +64,10 @@ class ProjectsController extends AppController
                             return $q->order(['CurrentGate.date' =>'DESC'])->limit(1);
                         }
                     ]
-                ]);
+                ],
+                    'Applications', 'GatingBoards', 'ProjectsGatingBoards', 'ProjectsGatingBoards.responses');*/
+            $event->getSubject()->query
+                ->contain(['Applications', 'GatingBoards', 'R`esponses']);
         });
 
 

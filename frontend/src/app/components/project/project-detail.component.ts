@@ -39,7 +39,7 @@ export class ProjectDetailComponent implements OnInit {
      */
     getProject(id: string) {
          this.datastoreService.findRecord(Project, id, {
-            include: 'applications, gating_boards'
+            include: 'applications, gating_boards, responses'
          }).subscribe(
              //(project: Project) => console.log(project)
              project => this.project = project

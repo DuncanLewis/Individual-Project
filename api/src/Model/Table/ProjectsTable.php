@@ -48,20 +48,22 @@ class ProjectsTable extends Table
          */
         $this->belongsToMany('CurrentGate', [
             'className' => 'GatingBoards',
+            'through' => 'ProjectsGatingBoards',
             'foreignKey' => 'project_id',
             'targetForeignKey' => 'gating_board_id',
             'joinTable' => 'projects_gating_boards'
         ]);
 
         $this->belongsToMany('Applications', [
-            'foreignKey' => 'project_id',
-            'targetForeignKey' => 'application_id',
-            'joinTable' => 'projects_applications'
+            'through' => 'ProjectsApplications'
         ]);
         $this->belongsToMany('GatingBoards', [
-            'foreignKey' => 'project_id',
-            'targetForeignKey' => 'gating_board_id',
-            'joinTable' => 'projects_gating_boards'
+            'through' => 'ProjectsGatingBoards'
+        ]);
+        $this->hasMany('Responses', [
+            'className' => 'Responses',
+            'targetForeignKey' => 'project_id',
+            'foreignKey' => 'projects_gating_board_id'
         ]);
     }
 

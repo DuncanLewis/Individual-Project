@@ -50,8 +50,9 @@ class ProjectsGatingBoardsTable extends Table
             'foreignKey' => 'gating_board_id',
             'joinType' => 'INNER'
         ]);
+
         $this->hasMany('Responses', [
-            'foreignKey' => 'projects_gating_board_id'
+            'foreignKey' => 'projects_gating_board_id',
         ]);
     }
 

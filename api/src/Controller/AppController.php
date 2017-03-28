@@ -91,9 +91,6 @@ class AppController extends Controller
         if ($this->viewBuilder()->className() === null) {
             $this->viewBuilder()->className('CrudView\View\CrudView');
         }
-
-        $action = $this->Crud->action();
-        $action->config('scaffold.site_title', 'HPE Project Tracker - Admin');
     }
 
 }

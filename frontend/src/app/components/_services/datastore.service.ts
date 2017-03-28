@@ -12,7 +12,8 @@ import {
     User,
     Project,
     Risk,
-    GatingBoard
+    GatingBoard,
+    Response
     }
     from '../_models/index';
 
