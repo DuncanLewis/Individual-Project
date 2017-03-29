@@ -1,8 +1,8 @@
 /**
  * Created by duncan on 17/03/2017.
  */
-import { Application, GatingBoard, Risk } from './index';
-import { JsonApiModelConfig, JsonApiModel, Attribute, HasMany, BelongsTo } from 'angular2-jsonapi';
+import {Application, GatingBoard, Risk, Document} from './index';
+import {JsonApiModelConfig, JsonApiModel, Attribute, HasMany, BelongsTo} from 'angular2-jsonapi';
 
 @JsonApiModelConfig({
     type: 'projects'
@@ -10,30 +10,32 @@ import { JsonApiModelConfig, JsonApiModel, Attribute, HasMany, BelongsTo } from 
 export class Project extends JsonApiModel {
 
     @Attribute()
-        id: string;
+    id: string;
 
     @Attribute()
-        name: string;
+    name: string;
 
     @Attribute()
-        status: string;
+    status: string;
 
     @Attribute()
-        description: string;
+    description: string;
 
     @Attribute()
-        created: string;
+    created: string;
 
     @Attribute()
-        modified: string;
-
+    modified: string;
 
     @HasMany()
-        applications: Application[];
+    applications: Application[];
 
     @HasMany()
-        risks: Risk[];
+    risks: Risk[];
+
+    @HasMany()
+    documents: Document[];
 
     @BelongsTo()
-        gating_boards: GatingBoard[];
+    gating_boards: GatingBoard[];
 }

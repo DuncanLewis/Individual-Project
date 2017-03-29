@@ -31,7 +31,8 @@ const API_RESOURCES = [
     'ProjectsApplications',
     'ProjectsGatingBoards',
     'Responses',
-    'Risks'
+    'Risks',
+    'Documents'
 ];
 Router::defaultRouteClass(DashedRoute::class);
 

@@ -62,6 +62,8 @@ class ProjectsTable extends Table
         ]);
 
         $this->hasMany('Risks');
+
+        $this->hasMany('Documents');
     }
 
     /**

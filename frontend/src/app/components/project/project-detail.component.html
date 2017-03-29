@@ -24,7 +24,9 @@
                 <div class="progress-bar"></div>
             </div>
             <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center"><span class="badge badge-success">Approved</span></div>
+            <div class="bs-wizard-info text-center">
+                <span class="badge badge-success">Approved</span>
+            </div>
         </div>
 
         <div [class.complete]="project.gating_boards._joinData.gate > -1"
@@ -84,12 +86,14 @@
                 <div class="progress-bar"></div>
             </div>
             <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center"><span class="badge badge-default">Upcoming</span></div>
+            <div class="bs-wizard-info text-center">
+                <span class="badge badge-default">Upcoming</span>
+            </div>
         </div>
     </section>
 
 
-    <ngb-tabset>
+    <ngb-tabset #t="ngbTabset">
         <ngb-tab id="tab-overview" title="Overview" class="nav-fill nav-justified mt-4">
             <template ngbTabContent>
 
@@ -110,10 +114,15 @@
                         </div>
                     </div>
 
-                    <div class="card card-success card-inverse text-center">
+                    <div class="card text-center"
+                         (click)="t.select('tab-risk-log')"
+                         [class.card-success]="project.risks.length == 0"
+                         [class.card-warning]="project.risks.length >= 1"
+                         [class.card-danger]="project.risks.length >= 5"
+                    >
                         <div class="card-block">
-                            <h3 class="card-title">0</h3>
-                            <small>Outstanding Issues</small>
+                            <h3 class="card-title">{{project.risks.length}}</h3>
+                            <small>Outstanding Risks</small>
                         </div>
                     </div>
 
@@ -123,36 +132,41 @@
                 <div class="row mt-4">
 
                     <div class="col-sm-6">
-                        <ul class="list-group">
-                            <li class="list-group-item justify-content-between">ID <span class="badge badge-primary">{{project.nokia_project_id}}</span> </li>
-                            <li class="list-group-item justify-content-between">Impacted Applications
-                                <div class="d-flex justify-content-end">
-                                    <span *ngFor="let application of project.applications"
-                                          ngbTooltip="{{application.name}}" class="badge badge-primary mr-1">{{application.abbreviation}}</span>
-                                </div>
-                            </li>
-                            <li class="list-group-item justify-content-between">Current Gate <strong>{{project.gating_boards._joinData.gate}}</strong></li>
-                            <li class="list-group-item justify-content-between">HPE PM <strong>{{project.hpe_pm}}</strong></li>
-                            <li class="list-group-item justify-content-between">Accenture PM <strong>{{project.accenture_pm}}</strong></li>
-                            <li class="list-group-item justify-content-between">PGLS <span class="badge badge-warning"><strong>{{project.post_go_live_support}}</strong></span></li>
-                        </ul>
-                    </div>
-
-                    <div class="col-sm-3">
 
                         <div class="card">
                             <div class="card-header">
                                 <a (click)="t.select('tab-approvals')">Project Approvals</a>
                             </div>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item list-group-item-success">Blue Planet - Approved</li>
-                                <li class="list-group-item list-group-item-success">SRM - Approved</li>
-                                <li class="list-group-item list-group-item-warning">eSpares - Waiting</li>
+                                <li *ngFor="let application of project.applications"
+                                    class="list-group-item list-group-item-warning">{{application.abbreviation}}
+                                </li>
                             </ul>
                         </div>
 
                     </div>
 
+                    <div class="col-sm-4">
+                        <ul class="list-group">
+                            <li class="list-group-item justify-content-between">ID <span class="badge badge-primary">{{project.nokia_project_id}}</span>
+                            </li>
+                            <li class="list-group-item justify-content-between">Impacted Applications
+                                <div class="d-flex justify-content-end">
+                                    <span *ngFor="let application of project.applications"
+                                          ngbTooltip="{{application.name}}" class="badge badge-primary mr-1">{{application.abbreviation}}</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item justify-content-between">Current Gate <strong>{{project.gating_boards._joinData.gate}}</strong>
+                            </li>
+                            <li class="list-group-item justify-content-between">HPE PM
+                                <strong>{{project.hpe_pm}}</strong></li>
+                            <li class="list-group-item justify-content-between">Accenture PM <strong>{{project.accenture_pm}}</strong>
+                            </li>
+                            <li class="list-group-item justify-content-between">PGLS <span
+                                    class="badge badge-warning"><strong>{{project.post_go_live_support}}</strong></span>
+                            </li>
+                        </ul>
+                    </div>
 
                 </div>
 
@@ -173,10 +187,13 @@
                     <div class="col-sm-6">
                         <div class="card">
                             <ul class="list-group list-group-flush">
-                                <li *ngFor="let risk of project.risks" (click)="selectRisk(risk)" class="list-group-item">{{risk.title}}</li>
+                                <li *ngFor="let risk of project.risks" (click)="selectRisk(risk)"
+                                    class="list-group-item">{{risk.title}}
+                                </li>
                             </ul>
-                            <input type="text" class="form-control" (keyup.enter)="(createRisk())" [(ngModel)]="newRiskText">
-                            {{newRiskText}}
+                            <input type="text" class="form-control" placeholder="Add new risk"
+                                   (keyup.enter)="(createRisk())"
+                                   [(ngModel)]="newRiskText">
                         </div>
                     </div>
 
@@ -186,10 +203,10 @@
                             <!--<h3 class="card-header">{{risk.title}}</h3>-->
 
                             <!--<div class="card-block">-->
-                                <!--<p class="card-text">{{risk.content}}</p>-->
+                            <!--<p class="card-text">{{risk.content}}</p>-->
                             <!--</div>-->
                             <!--<div class="card-footer">-->
-                                <!--<a (click)="resolveRisk(risk)" class="btn btn-success btn-block">Resolve Risk</a>-->
+                            <!--<a (click)="resolveRisk(risk)" class="btn btn-success btn-block">Resolve Risk</a>-->
                             <!--</div>-->
                         </div>
                     </div>
@@ -202,13 +219,103 @@
         </ngb-tab>
         <ngb-tab id="tab-documentation" title="Documentation">
             <template ngbTabContent>
-                <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
-                    retro synth
-                    master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher
-                    retro keffiyeh
-                    dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat
-                    salvia cillum
-                    iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+                <div class="row mt-4">
+                    <div class="col-sm-8">
+                        <ngb-accordion #acc="ngbAccordion" [closeOthers]="true" activeIds="ngb-panel-0">
+                            <ngb-panel title="G-2">
+                                <template ngbPanelContent>
+                                    <table class="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Added By</th>
+                                            <th>Added On</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr *ngFor="let document of project.documents">
+                                            <td>{{document.name}}</td>
+                                            <td>Jen Santiago</td>
+                                            <td>{{document.created}}</td>
+                                            <td>
+                                                <div class="btn-group" role="group" aria-label="Basic example">
+                                                    <a type="button" class="btn btn-secondary btn-primary">Download</a>
+                                                    <button type="button" class="btn btn-secondary btn-danger">Delete</button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                </template>
+                            </ngb-panel>
+                            <ngb-panel title="G-1">
+                                <template ngbPanelContent>
+
+                                </template>
+                            </ngb-panel>
+                            <ngb-panel title="G3">
+                                <template ngbPanelContent>
+
+                                </template>
+                            </ngb-panel>
+                            <ngb-panel title="G5">
+                                <template ngbPanelContent>
+
+                                </template>
+                            </ngb-panel>
+                            <ngb-panel title="G6">
+                                <template ngbPanelContent>
+
+                                </template>
+                            </ngb-panel>
+                            <ngb-panel title="G7">
+                                <template ngbPanelContent>
+
+                                </template>
+                            </ngb-panel>
+                        </ngb-accordion>
+                    </div>
+
+                    <div class="col-sm-4">
+
+                        <div class="card">
+                            <div class="card-block">
+                                <h4 class="card-title">Add New Document</h4>
+
+                                <form [formGroup]="documentForm" (ngSubmit)="createDocument()">
+                                    <div class="form-group" [class.has-warning]="documentForm.controls.name.errors">
+                                        <label>Document Name</label>
+                                        <input type="text" class="form-control" formControlName="name" placeholder="Enter the documents name">
+                                        <div class="form-control-feedback" *ngIf="documentForm.controls.name.errors">This field is required!</div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Gate</label>
+                                        <select class="form-control" formControlName="gate">
+                                            <option>G-2</option>
+                                            <option>G-1</option>
+                                            <option>G3</option>
+                                            <option>G5</option>
+                                            <option>G6</option>
+                                            <option>G7</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group" [class.has-warning]="documentForm.controls.link.errors">
+                                        <label>Document Link</label>
+                                        <input type="url" class="form-control" formControlName="link" placeholder="Paste link to document here">
+                                        <div class="form-control-feedback" *ngIf="documentForm.controls.link.errors">This field is required!</div>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-block btn-primary">Add Document</button>
+
+                                </form>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
             </template>
         </ngb-tab>
         <ngb-tab id="tab-approvals" title="Approvals">
@@ -225,3 +332,21 @@
     </ngb-tabset>
 
 </div>
+
+<template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p>One fine body&hellip;</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+    </div>
+</template>
+<hr>
+
+<pre>{{closeResult}}</pre>

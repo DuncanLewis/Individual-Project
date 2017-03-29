@@ -69,7 +69,8 @@ class ProjectsController extends AppController
             $event->getSubject()->query
                 ->contain(['Applications',
                     'GatingBoards',
-                    'Risks'
+                    'Risks',
+                    'Documents'
                 ]); //This needs to have responses within an array inside either GatingBoards or ProjectsGatingBoards - see: http://stackoverflow.com/questions/9087083/model-x-is-not-associated-with-model-y-cakephp
         });
 

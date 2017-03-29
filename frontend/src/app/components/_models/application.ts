@@ -18,4 +18,6 @@ export class Application extends JsonApiModel{
 
     @Attribute()
         description: string;
+
+
 }

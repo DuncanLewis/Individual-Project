@@ -13,7 +13,8 @@ import {
     Project,
     Risk,
     GatingBoard,
-    Response
+    Response,
+    Document
     }
     from '../_models/index';
 
@@ -26,8 +27,8 @@ import {
         projects: Project,
         gating_boards: GatingBoard,
         risks: Risk,
-        responses: Response
-
+        responses: Response,
+        documents: Document
     }
 })
 
@@ -47,30 +48,4 @@ export class DatastoreService extends JsonApiDatastore {
         super(http);
         this.headers = new Headers({'Authorization': 'Bearer ' + this.authService.token});
     }
-
-
-    /**
-     * getProjects
-     *
-     * Gets all projects, using the JsonAPI component to query the project model in the backend
-     *
-     * @returns {Observable<Project[]>}
-     */
-    /*getProjects() {
-        return this.datastore.query(Project, {
-            include: 'applications'
-        });
-    }*/
-
-    /**
-     * getProject
-     *
-     * Gets a SINGLE project, with a given ID, using the JsonAPI Component to query project model backend
-     * @param id
-     */
-    /*getProject(id: string) {
-        return this.datastore.findRecord(Project, id, {
-            include: 'applications'
-        });
-    }*/
 }

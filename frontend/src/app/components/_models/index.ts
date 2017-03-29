@@ -12,3 +12,4 @@ export * from './project';
 export * from './gating_board';
 export * from './risk';
 export * from './response';
+export * from './document';

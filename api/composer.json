@@ -15,7 +15,8 @@
         "neomerx/json-api": "^1.0",
         "friendsofcake/crud": "^4.4",
         "friendsofcake/search": "^2.4",
-        "friendsofcake/crud-view": "^0.4.3"
+        "friendsofcake/crud-view": "^0.4.3",
+        "dereuromark/cakephp-databaselog": "^2.2"
     },
     "require-dev": {
         "psy/psysh": "@stable",
