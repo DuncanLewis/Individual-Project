@@ -4,7 +4,7 @@ namespace App\Model\Entity;
 use Cake\ORM\Entity;
 
 /**
- * Response Entity
+ * ProjectsGatingBoardsProjectsApplication Entity
  *
  * @property string $id
  * @property string $projects_gating_board_id
@@ -15,10 +15,11 @@ use Cake\ORM\Entity;
  * @property \Cake\I18n\Time $created
  * @property \Cake\I18n\Time $modified
  *
- * @property \App\Model\Entity\ProjectsGatingBoard[] $projects_gating_boards
+ * @property \App\Model\Entity\ProjectsGatingBoard $projects_gating_board
+ * @property \App\Model\Entity\ProjectsApplication $projects_application
  * @property \App\Model\Entity\User $user
  */
-class Response extends Entity
+class ProjectsGatingBoardsProjectsApplication extends Entity
 {
 
     /**

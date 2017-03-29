@@ -51,9 +51,11 @@ class ProjectsGatingBoardsTable extends Table
             'joinType' => 'INNER'
         ]);
 
-        $this->hasMany('Responses', [
-            'foreignKey' => 'projects_gating_board_id',
+        $this->belongsToMany('ProjectsApplications', [
+            'through' => 'ProjectsGatingBoardsProjectsApplications'
         ]);
+
+
     }
 
     /**

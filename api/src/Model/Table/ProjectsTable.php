@@ -60,11 +60,6 @@ class ProjectsTable extends Table
         $this->belongsToMany('GatingBoards', [
             'through' => 'ProjectsGatingBoards'
         ]);
-        $this->hasMany('Responses', [
-            'className' => 'Responses',
-            'targetForeignKey' => 'project_id',
-            'foreignKey' => 'projects_gating_board_id'
-        ]);
 
         $this->hasMany('Risks');
     }

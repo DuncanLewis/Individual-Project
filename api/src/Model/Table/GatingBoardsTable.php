@@ -41,9 +41,10 @@ class GatingBoardsTable extends Table
         $this->addBehavior('Timestamp');
 
         $this->belongsToMany('Projects', [
-            'foreignKey' => 'gating_board_id',
+            /*'foreignKey' => 'gating_board_id',
             'targetForeignKey' => 'project_id',
-            'joinTable' => 'projects_gating_boards'
+            'joinTable' => 'projects_gating_boards'*/
+            'through' => 'ProjectsGatingBoards'
         ]);
     }
 

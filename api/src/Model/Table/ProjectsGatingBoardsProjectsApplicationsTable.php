@@ -7,23 +7,23 @@ use Cake\ORM\Table;
 use Cake\Validation\Validator;
 
 /**
- * Responses Model
+ * ProjectsGatingBoardsProjectsApplications Model
  *
  * @property \Cake\ORM\Association\BelongsTo $ProjectsGatingBoards
  * @property \Cake\ORM\Association\BelongsTo $ProjectsApplications
  * @property \Cake\ORM\Association\BelongsTo $Users
  *
- * @method \App\Model\Entity\Response get($primaryKey, $options = [])
- * @method \App\Model\Entity\Response newEntity($data = null, array $options = [])
- * @method \App\Model\Entity\Response[] newEntities(array $data, array $options = [])
- * @method \App\Model\Entity\Response|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
- * @method \App\Model\Entity\Response patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
- * @method \App\Model\Entity\Response[] patchEntities($entities, array $data, array $options = [])
- * @method \App\Model\Entity\Response findOrCreate($search, callable $callback = null, $options = [])
+ * @method \App\Model\Entity\ProjectsGatingBoardsProjectsApplication get($primaryKey, $options = [])
+ * @method \App\Model\Entity\ProjectsGatingBoardsProjectsApplication newEntity($data = null, array $options = [])
+ * @method \App\Model\Entity\ProjectsGatingBoardsProjectsApplication[] newEntities(array $data, array $options = [])
+ * @method \App\Model\Entity\ProjectsGatingBoardsProjectsApplication|bool save(\Cake\Datasource\EntityInterface $entity, $options = [])
+ * @method \App\Model\Entity\ProjectsGatingBoardsProjectsApplication patchEntity(\Cake\Datasource\EntityInterface $entity, array $data, array $options = [])
+ * @method \App\Model\Entity\ProjectsGatingBoardsProjectsApplication[] patchEntities($entities, array $data, array $options = [])
+ * @method \App\Model\Entity\ProjectsGatingBoardsProjectsApplication findOrCreate($search, callable $callback = null, $options = [])
  *
  * @mixin \Cake\ORM\Behavior\TimestampBehavior
  */
-class ResponsesTable extends Table
+class ProjectsGatingBoardsProjectsApplicationsTable extends Table
 {
 
     /**
@@ -36,12 +36,16 @@ class ResponsesTable extends Table
     {
         parent::initialize($config);
 
-        $this->setTable('responses');
+        $this->setTable('projects_gating_boards_projects_applications');
         $this->setDisplayField('id');
         $this->setPrimaryKey('id');
 
         $this->addBehavior('Timestamp');
 
+        $this->belongsTo('ProjectsGatingBoards', [
+            'foreignKey' => 'projects_gating_board_id',
+            'joinType' => 'INNER'
+        ]);
         $this->belongsTo('ProjectsApplications', [
             'foreignKey' => 'projects_application_id',
             'joinType' => 'INNER'
@@ -50,8 +54,6 @@ class ResponsesTable extends Table
             'foreignKey' => 'user_id',
             'joinType' => 'INNER'
         ]);
-
-        $this->belongsTo('ProjectsGatingBoards');
     }
 
     /**

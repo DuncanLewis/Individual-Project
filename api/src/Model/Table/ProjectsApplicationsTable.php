@@ -50,8 +50,8 @@ class ProjectsApplicationsTable extends Table
             'foreignKey' => 'application_id',
             'joinType' => 'INNER'
         ]);
-        $this->hasMany('Responses', [
-            'foreignKey' => 'projects_application_id'
+        $this->belongsToMany('ProjectsGatingBoards', [
+            'through' => 'ProjectsGatingBoardsProjectsApplications'
         ]);
     }
 
