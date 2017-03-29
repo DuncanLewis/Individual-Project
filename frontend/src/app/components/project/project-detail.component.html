@@ -1,11 +1,20 @@
 <div *ngIf="project">
-    <h2>Viewing Project {{ project.nokia_project_id}} - {{ project.name }}</h2>
-    <h3>Application(s) Impacted: <span *ngFor="let application of project.applications"
-                                       ngbTooltip="{{application.name}}" class="badge badge-primary mr-1">{{application.abbreviation}}</span>
-    </h3>
+    <h2>Viewing Project {{ project.nokia_project_id}}</h2>
+    <h3>{{ project.name }}</h3>
 
     <section class="row bs-wizard" style="border-bottom:0;">
 
+        <!--
+            This code displays the gating stage progress bar
+            Logic explanation:
+                Is the current gate greater than -2?
+                    If yes display the class 'complete'
+                Is the current gate less than -2?
+                    If yes display the class 'disabled'
+                Is the current gate 2?
+                    If yes then display the class 'active'
+                The same logic is used throughout the progress section
+         -->
         <div [class.complete]="project.gating_boards._joinData.gate > -2"
              [class.disabled]="project.gating_boards._joinData.gate < -2"
              [class.active]="project.gating_boards._joinData.gate == -2"
@@ -15,7 +24,7 @@
                 <div class="progress-bar"></div>
             </div>
             <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">G-2</div>
+            <div class="bs-wizard-info text-center"><span class="badge badge-success">Approved</span></div>
         </div>
 
         <div [class.complete]="project.gating_boards._joinData.gate > -1"
@@ -27,7 +36,7 @@
                 <div class="progress-bar"></div>
             </div>
             <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">G-1</div>
+            <div class="bs-wizard-info text-center"><span class="badge badge-success">Approved</span></div>
         </div>
 
         <div [class.complete]="project.gating_boards._joinData.gate > 3"
@@ -39,7 +48,7 @@
                 <div class="progress-bar"></div>
             </div>
             <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">G3</div>
+            <div class="bs-wizard-info text-center"><span class="badge badge-success">Approved</span></div>
         </div>
 
         <div [class.complete]="project.gating_boards._joinData.gate > 5"
@@ -51,7 +60,7 @@
                 <div class="progress-bar"></div>
             </div>
             <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">G5</div>
+            <div class="bs-wizard-info text-center"><span class="badge badge-warning">Current Gate</span></div>
         </div>
 
         <div [class.complete]="project.gating_boards._joinData.gate > 6"
@@ -63,7 +72,7 @@
                 <div class="progress-bar"></div>
             </div>
             <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">G6</div>
+            <div class="bs-wizard-info text-center"><span class="badge badge-default">Upcoming</span></div>
         </div>
 
         <div [class.complete]="project.gating_boards._joinData.gate > 7"
@@ -75,13 +84,13 @@
                 <div class="progress-bar"></div>
             </div>
             <a href="javascript:;" class="bs-wizard-dot"></a>
-            <div class="bs-wizard-info text-center">G7</div>
+            <div class="bs-wizard-info text-center"><span class="badge badge-default">Upcoming</span></div>
         </div>
     </section>
 
 
     <ngb-tabset>
-        <ngb-tab id="tab-overview" title="Overview" class="nav-fill nav-justified">
+        <ngb-tab id="tab-overview" title="Overview" class="nav-fill nav-justified mt-4">
             <template ngbTabContent>
 
 
@@ -113,6 +122,22 @@
 
                 <div class="row mt-4">
 
+                    <div class="col-sm-6">
+                        <ul class="list-group">
+                            <li class="list-group-item justify-content-between">ID <span class="badge badge-primary">{{project.nokia_project_id}}</span> </li>
+                            <li class="list-group-item justify-content-between">Impacted Applications
+                                <div class="d-flex justify-content-end">
+                                    <span *ngFor="let application of project.applications"
+                                          ngbTooltip="{{application.name}}" class="badge badge-primary mr-1">{{application.abbreviation}}</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item justify-content-between">Current Gate <strong>{{project.gating_boards._joinData.gate}}</strong></li>
+                            <li class="list-group-item justify-content-between">HPE PM <strong>{{project.hpe_pm}}</strong></li>
+                            <li class="list-group-item justify-content-between">Accenture PM <strong>{{project.accenture_pm}}</strong></li>
+                            <li class="list-group-item justify-content-between">PGLS <span class="badge badge-warning"><strong>{{project.post_go_live_support}}</strong></span></li>
+                        </ul>
+                    </div>
+
                     <div class="col-sm-3">
 
                         <div class="card">
@@ -127,6 +152,8 @@
                         </div>
 
                     </div>
+
+
                 </div>
 
 
@@ -146,29 +173,24 @@
                     <div class="col-sm-6">
                         <div class="card">
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">SAP related issue</li>
-                                <li class="list-group-item">Dapibus ac facilisis in</li>
-                                <li class="list-group-item">Vestibulum at eros</li>
-                                <li class="list-group-item">
-                                    <input class="form-control form-control-lg" type="text"
-                                           placeholder="Enter new risk">
-                                </li>
+                                <li *ngFor="let risk of project.risks" (click)="selectRisk(risk)" class="list-group-item">{{risk.title}}</li>
                             </ul>
+                            <input type="text" class="form-control" (keyup.enter)="(createRisk())" [(ngModel)]="newRiskText">
+                            {{newRiskText}}
                         </div>
                     </div>
 
                     <div class="col-sm-6">
                         <div class="card">
 
-                            <h3 class="card-header">SAP Related issue</h3>
+                            <!--<h3 class="card-header">{{risk.title}}</h3>-->
 
-                            <div class="card-block">
-                                <p class="card-text">SAP 12.02 has an issue with ERP EAI integrations and this could be
-                                    affected.</p>
-                            </div>
-                            <div class="card-footer">
-                                <a class="btn btn-success btn-block">Resolve Issue</a>
-                            </div>
+                            <!--<div class="card-block">-->
+                                <!--<p class="card-text">{{risk.content}}</p>-->
+                            <!--</div>-->
+                            <!--<div class="card-footer">-->
+                                <!--<a (click)="resolveRisk(risk)" class="btn btn-success btn-block">Resolve Risk</a>-->
+                            <!--</div>-->
                         </div>
                     </div>
 

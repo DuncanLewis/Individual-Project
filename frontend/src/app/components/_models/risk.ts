@@ -1,22 +1,28 @@
 /**
  * Created by duncan on 27/03/2017.
  */
-import { JsonApiModelConfig, JsonApiModel, Attribute, HasMany, BelongsTo } from 'angular2-jsonapi';
+import {JsonApiModelConfig, JsonApiModel, Attribute, HasMany, BelongsTo} from 'angular2-jsonapi';
 
 @JsonApiModelConfig({
     type: 'risks'
 })
-export class Risk extends JsonApiModel{
+export class Risk extends JsonApiModel {
     @Attribute()
-        id: string;
+    id: string;
 
     @Attribute()
-        title: string;
+    user_id: string;
 
     @Attribute()
-        description: string;
+    project_id: string;
 
     @Attribute()
-        active: boolean;
+    title: string;
+
+    @Attribute()
+    content: string;
+
+    @Attribute()
+    active: boolean;
 
 }

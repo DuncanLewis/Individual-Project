@@ -65,6 +65,8 @@ class ProjectsTable extends Table
             'targetForeignKey' => 'project_id',
             'foreignKey' => 'projects_gating_board_id'
         ]);
+
+        $this->hasMany('Risks');
     }
 
     /**

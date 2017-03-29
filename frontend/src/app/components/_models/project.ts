@@ -1,7 +1,7 @@
 /**
  * Created by duncan on 17/03/2017.
  */
-import { Application, GatingBoard } from './index';
+import { Application, GatingBoard, Risk } from './index';
 import { JsonApiModelConfig, JsonApiModel, Attribute, HasMany, BelongsTo } from 'angular2-jsonapi';
 
 @JsonApiModelConfig({
@@ -30,6 +30,9 @@ export class Project extends JsonApiModel {
 
     @HasMany()
         applications: Application[];
+
+    @HasMany()
+        risks: Risk[];
 
     @BelongsTo()
         gating_boards: GatingBoard[];

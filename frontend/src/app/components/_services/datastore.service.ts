@@ -24,7 +24,9 @@ import {
         users: User,
         applications: Application,
         projects: Project,
-        gating_boards: GatingBoard
+        gating_boards: GatingBoard,
+        risks: Risk,
+        responses: Response
 
     }
 })
